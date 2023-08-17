@@ -11762,7 +11762,7 @@ a {
   justify-content: center;
   font-style: normal;
   text-align: left !important;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .shipping-thermometer__shipping_meter_wrapper
@@ -48279,4 +48279,8 @@ form input, form select, form textarea {
 .cCRpMk a, .cCRpMk a:link, .cCRpMk a:visited, .cCRpMk a:active {
   color: rgb(0, 0, 0);
   text-decoration: underline;
+}
+
+.sc-18w9h10-0.eJeHGQ {
+  position: relative;
 }
