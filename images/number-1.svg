@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="73px" viewBox="0 0 34 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1</title>
+    <defs>
+        <path d="M79.95,233 L79.95,170 L68.7,170 C68.04,171.38 67.11,172.64 65.91,173.78 C64.89,174.8 63.555,175.76 61.905,176.66 C60.255,177.56 58.17,178.19 55.65,178.55 L55.65,178.55 L55.65,187.1 L66.45,187.1 L66.45,233 L79.95,233 Z" id="path-1"></path>
+        <filter x="-39.1%" y="-10.3%" width="170.0%" height="127.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="-1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.208397072 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="PROFESSIONAL-PRINT-LP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440-Professional-Print-LP-Page-Layout" transform="translate(-50.000000, -741.000000)" fill-rule="nonzero">
+            <g id="1" transform="translate(0.000000, 574.000000)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#CC0000" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規ユーザー登録</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="account">
+  <header class="header">
+    <div class="header__inner l__content">
+      <div class="header__main">
+        <h1 class="header__logo"><a href=""><img src="./images/agereru_logo.png" alt=""></a></h1>
+        <form action="" class="main__search" id="searchbox">
+          <input class="search__input" type="text" id="search" name="search" value maxlength="60" placeholder="製品を検索">
+          <img src="./images/icon-close.png" alt="Close" class="token-input-btn">
+          <label for="search">
+            <span class="sr-only">検索</span>
+          </label>
+          <button class="searchBtn" type="submit">検索</button>
+          <img src="./images/icon-close.png" alt="Close" class="search-close">
+        </form>
+        <div class="nav-main__links">
+          <div class="loginform-container">
+            <ul class="account-navigation">
+              <li class="account-navigation-item item-hide">
+                <a href="">
+                  <span class="icon-navigation">
+                    <svg width="18" height="18" viewBox="0 0 18 18" class="svg">
+                      <defs>
+                        <path id="a"
+                          d="M1.8 10.8V8.1l4.5 1.8v2.7l-4.5-1.8zm6.3-2.12v9.005L.535 14.324A.9.9 0 0 1 0 13.5V4.999L8.1 8.68zm1.8 0L18 4.998V13.5c0 .357-.21.68-.535.824L9.9 17.685V8.68zm4.304-3.933L6.64.965 8.634.08a.9.9 0 0 1 .732 0l7.64 3.395-2.802 1.273zM4.51 1.912l7.585 3.794L9 7.112.995 3.474 4.51 1.912z" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h18v18H0z" />
+                        <mask id="b" fill="#fff">
+                          <use xlink:href="#a">
+                        </mask>
+                        <g fill-rule="nonzero" mask="url(#b)" class="svg-fill">
+                          <path d="M0 0h18v18H0z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  注文
+                </a>
+              </li>
+              <li class="account-navigation-item">
+                <a href="" class="">
+                  <span class="icon-navigation">
+                    <svg width="18" height="18" viewBox="0 0 18 18" class="svg">
+                      <defs>
+                        <path id="c"
+                          d="M.9 16.971C.9 13.337 4.231 10.8 9 10.8s8.1 2.537 8.1 6.171c0 .443-.581 1.029-1.298 1.029H2.198C1.477 18 .9 17.54.9 16.971zM9 9a4.505 4.505 0 0 1-4.5-4.5C4.5 2.018 6.518 0 9 0s4.5 2.018 4.5 4.5S11.482 9 9 9z" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h18v18H0z" />
+                        <g>
+                          <mask id="d" fill="#fff">
+                            <use xlink:href="#c" />
+                          </mask>
+                          <use fill="#A1A1A1" xlink:href="#c" />
+                          <g fill="#A1A1A1" fill-rule="nonzero" mask="url(#d)" class="svg-fill">
+                            <path d="M0 0h18v18H0z" />
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="item-hide">アカウント</span>
+                </a>
+                <ul class="account-dropdown-list _large" id="mobile-menu">
+                  <li class="account-dropdown-item">
+                    <a href=""><span class="icon-navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                          height="18" viewBox="0 0 18 18">
+                          <defs>
+                            <path id="c"
+                              d="M.9 16.971C.9 13.337 4.231 10.8 9 10.8s8.1 2.537 8.1 6.171c0 .443-.581 1.029-1.298 1.029H2.198C1.477 18 .9 17.54.9 16.971zM9 9a4.505 4.505 0 0 1-4.5-4.5C4.5 2.018 6.518 0 9 0s4.5 2.018 4.5 4.5S11.482 9 9 9z" />
+                          </defs>
+                          <g fill="none" fill-rule="evenodd">
+                            <path d="M0 0h18v18H0z" />
+                            <g>
+                              <mask id="d" fill="#fff">
+                                <use xlink:href="#c" />
+                              </mask>
+                              <use fill="#A1A1A1" xlink:href="#c" />
+                              <g fill="#A1A1A1" fill-rule="nonzero" mask="url(#d)">
+                                <path d="M0 0h18v18H0z" />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                      ログイン</a>
+                  </li>
+                  <li class="account-dropdown-item">
+                    <a href=""><span class="icon-navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                          <g fill="none" fill-rule="evenodd">
+                            <path d="M-1 0h18v18H-1z" />
+                            <g fill="#444">
+                              <path
+                                d="M4.079 16.259l-2.338-2.338-1.156 1.157.59.591L0 16.843 1.157 18l1.175-1.174.59.59zM1.753 11.584a.817.817 0 0 0 0 1.157l3.507 3.506a.817.817 0 0 0 1.157 0l7.615-7.615L9.369 3.97l-7.616 7.615z" />
+                              <path
+                                d="M16.936 4.57L13.43 1.065a.819.819 0 0 0-1.157 0l-.59.59L10.509.48a.819.819 0 0 0-1.157 0L4.09 5.74l1.157 1.157 4.681-4.682 5.26 5.26 1.747-1.747a.817.817 0 0 0 0-1.157" />
+                            </g>
+                          </g>
+                        </svg>
+                      </span>登録</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="account-navigation-item item-hide">
+                <a href="" class="">
+                  <span class="icon-navigation">
+                    <svg width="18" height="18" viewBox="0 0 18 18">
+                      <defs>
+                        <path id="h"
+                          d="M9.9 10.687V11.7H8.1V9H9a1.801 1.801 0 1 0-1.8-1.8H5.4c0-1.985 1.615-3.6 3.6-3.6s3.6 1.615 3.6 3.6a3.608 3.608 0 0 1-2.7 3.487M9 14.625a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25M9 0C4.037 0 0 4.037 0 9s4.037 9 9 9 9-4.037 9-9-4.037-9-9-9" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h18v18H0z" />
+                        <mask id="i" fill="#fff">
+                          <use xlink:href="#h" />
+                        </mask>
+                        <use fill="#A1A1A1" xlink:href="#h" />
+                        <g fill="#A1A1A1" fill-rule="nonzero" mask="url(#i)" class="svg-fill">
+                          <path d="M0 0h18v18H0z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  ヘルプ
+                </a>
+                <ul class="account-dropdown-list" id="mobile-menu">
+                  <li class="account-dropdown-item">
+                    <a href="">ヘルプセンター</a>
+                  </li>
+                  <li class="account-dropdown-item">
+                    <a href="">電話:000-0000</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="sp_account" href="">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <nav class="sp_nav">
+            <ul>
+              <li>
+                <a href="">
+                  <i class="fa-solid fa-user"></i>ログイン
+                </a>
+              </li>
+              <li><a href=""><span class="icon-navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M-1 0h18v18H-1z" />
+                        <g fill="#444">
+                          <path
+                            d="M4.079 16.259l-2.338-2.338-1.156 1.157.59.591L0 16.843 1.157 18l1.175-1.174.59.59zM1.753 11.584a.817.817 0 0 0 0 1.157l3.507 3.506a.817.817 0 0 0 1.157 0l7.615-7.615L9.369 3.97l-7.616 7.615z" />
+                          <path
+                            d="M16.936 4.57L13.43 1.065a.819.819 0 0 0-1.157 0l-.59.59L10.509.48a.819.819 0 0 0-1.157 0L4.09 5.74l1.157 1.157 4.681-4.682 5.26 5.26 1.747-1.747a.817.817 0 0 0 0-1.157" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  登録</a></li>
+              <li>
+                <a href=""> <span class="icon-navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                      height="18" viewBox="0 0 18 18">
+                      <defs>
+                        <path id="e"
+                          d="M1.8 10.8V8.1l4.5 1.8v2.7l-4.5-1.8zm6.3-2.12v9.005L.535 14.324A.9.9 0 0 1 0 13.5V4.999L8.1 8.68zm1.8 0L18 4.998V13.5c0 .357-.21.68-.535.824L9.9 17.685V8.68zm4.304-3.933L6.64.965 8.634.08a.9.9 0 0 1 .732 0l7.64 3.395-2.802 1.273zM4.51 1.912l7.585 3.794L9 7.112.995 3.474 4.51 1.912z" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h18v18H0z" />
+                        <mask id="f" fill="#fff">
+                          <use xlink:href="#e" />
+                        </mask>
+                        <g fill="#444" fill-rule="nonzero" mask="url(#f)">
+                          <path d="M0 0h18v18H0z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>注文</a>
+              </li>
+              <li><a href="">
+                  <i class="fa-solid fa-circle-question"></i>ヘルプセンター</a></li>
+              <li class="tel-info">
+                <span class="icon-navigation">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                    <g fill="none" fill-rule="evenodd">
+                      <path fill-rule="nonzero" d="M0 0h18v18H0z" />
+                      <path fill="#444"
+                        d="M13.563 14.098H10.9v-.015A6.658 6.658 0 0 1 4.516 7.7h-.015V5.035c0-.295.239-.533.533-.535l2.133.001c.294 0 .533.24.533.533v2.134a.533.533 0 0 1-.532.532H6.116a5.063 5.063 0 0 0 4.782 4.785v-1.053c0-.295.238-.535.534-.535l2.132.001c.294 0 .532.239.532.532l.002 2.133a.538.538 0 0 1-.535.535M9 0a9 9 0 1 0 .001 18 9 9 0 0 0 0-18" />
+                    </g>
+                  </svg>
+                </span>
+                <div class="tel-info-wrap">
+                  <p>カスタマーサービスに電話する</p>
+                  <p class="tel-num">000-0000</p>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="overlay"></div>
+          <div class="cart">
+            <ul class="account-navigation">
+              <li class="account-navigation-item cart-navigation">
+                <a href="" class="">
+                  <span class="icon-navigation cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </span>
+                  <span class="item-link item-hide">カート</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header__category">
+        <div class="header__category--inner">
+          <ul class="menu" id="menu">
+            <li class="menu_list">
+              <a href="#">すべての製品</a>
+              <div class="sp_close">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+                    <div class="tab">
+                      <button class="tablinks tablinks_first" onmouseover="openCity(event, 'category1-1')">名刺</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-2')">サイン、バナー、ポスター</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-3')">カードと招待状</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-4')">ドキュメントの印刷</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-5')">文房具</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-6')">カスタムスタンプ</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-7')">フォトギフド</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-8')">販売およびマーケティング資料</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-9')">販促品</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-10')">印別ソリューション</button>
+                      <button class="tablinks last-border-radius"
+                        onmouseover="openCity(event, 'category1-11')">その他のビジネスソリューション</button>
+                    </div>
+
+                    <div id="category1-1" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての名刺</a></li>
+                          <li><a href="">従来の名刺</a></li>
+                          <li><a href="">隆起プリント名刺</a></li>
+                          <li><a href="">エグゼクティブ名刺</a></li>
+                          <li><a href="">超厚手名刺</a></li>
+                          <li><a href="">ポイントカード</a></li>
+                          <li><a href="">予約カード</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-2" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのサイン、バナー、ポスター</a></li>
+                          <li><a href="">ヤードサイン</a></li>
+                          <li><a href="">Aフレーム</a></li>
+                          <li><a href="">ウィンドウデカール</a></li>
+                          <li><a href="">フェザーフラッグ</a></li>
+                          <li><a href="">スナップフレーム サイン</a></li>
+                          <li><a href="">フロアデカール</a></li>
+                          <li><a href="">品り下げ看板</a></li>
+                          <li><a href="">ウォールデカール</a></li>
+                          <li><a href="">磁気車の標識</a></li>
+                          <li><a href="">屋外看板</a></li>
+                          <li><a href="">パナー</a></li>
+                          <li><a href="">パナースタンド</a></li>
+                        </ul>
+
+                        <ul class="tabcontent-container-secondlist">
+                          <li><a href="">ポスター</a></li>
+                          <li><a href="">発泡ポードのポスター</a></li>
+                          <li><a href="">粘着ポスター</a></li>
+                        </ul>
+
+                      </div>
+                    </div>
+
+                    <div id="category1-3" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのカードと招待状</a></li>
+                          <li><a href="">独自のアップロード</a></li>
+                          <li><a href="">ホリデー</a></li>
+                          <li><a href="">ピジネスのご挨拶</a></li>
+                          <li><a href="">結婚式</a></li>
+                          <li><a href="">赤ちゃん</a></li>
+                          <li><a href="">招待状</a></li>
+                          <li><a href="">メモリアル</a></li>
+                          <li><a href="">ありがとうございました</a></li>
+                          <li><a href="">お知らせ</a></li>
+                          <li><a href="">誕生日</a></li>
+                          <li><a href="">卒業</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-4" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">全文書印刷</a></li>
+                          <li><a href="">シンプルプリント</a></li>
+                          <li><a href="">プロフェッショナルプリント</a></li>
+                          <li><a href="">小冊子</a></li>
+                          <li><a href="">設計囡</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-5" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">切手</a></li>
+                          <li><a href="">筒封</a></li>
+                          <li><a href="">返品先住所ラベル</a></li>
+                          <li><a href="">宛名ラベル</a></li>
+                          <li><a href="">レターヘッド</a></li>
+                          <li><a href="">エグゼクティブレターヘッド</a></li>
+                          <li><a href="">ノートカード</a></li>
+                          <li><a href="">メモ帳</a></li>
+                          <li><a href="">ネームタグ</a></li>
+                          <li><a href="">刻印デスクネームプレート</a></li>
+                          <li><a href="">刻まれたドアと壁の看板</a></li>
+                          <li><a href="">ノートブック</a></li>
+                        </ul>
+
+                        <ul class="tabcontent-container-secondlist">
+                          <li><a href="">エンポス</a></li>
+                          <li><a href="">ポストイット</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-6" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">テキスタイルスタンプ</a></li>
+                          <li><a href="">公証人スタンプ</a></li>
+                          <li><a href="">プレインクスタンプ</a></li>
+                          <li><a href="">日付スタンプ</a></li>
+                          <li><a href="">インク付き住所スタンプ</a></li>
+                          <li><a href="">インク付き保証スタンフ</a></li>
+                          <li><a href="">インク入りメッセージスタンプ</a></li>
+                          <li><a href="">インク付き署名スタンプ</a></li>
+                          <li><a href="">ゴム印</a></li>
+                          <li><a href="">セルフィンクスタンプ</a></li>
+                          <li><a href="">スタンプリフィル＆アクセサリー</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-7" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">ギフトラップ</a></li>
+                          <li><a href="">カスタムウォールアート</a></li>
+                          <li><a href="">フォトマグ</a></li>
+                          <li><a href="">個人カレンダー</a></li>
+                          <li><a href="">装飾品</a></li>
+                          <li><a href="">フォトブランケット</a></li>
+                          <li><a href="">フォトパズル</a></li>
+                          <li><a href="">ボーダープリント</a></li>
+                          <li><a href="">フォトコースター</a></li>
+                          <li><a href="">フォトマウスバッド</a></li>
+                          <li><a href="">写真ポスター</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-8" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">ラベル＆ステッカー</a></li>
+                          <li><a href="">チラシ</a></li>
+                          <li><a href="">はがき</a></li>
+                          <li><a href="">パンフレット</a></li>
+                          <li><a href="">メニュー</a></li>
+                          <li><a href="">予約カード</a></li>
+                          <li><a href="">ポイントカード</a></li>
+                          <li><a href="">ラックカード</a></li>
+                          <li><a href="">磁石</a></li>
+                          <li><a href="">ネームタグ</a></li>
+                          <li><a href="">商品券</a></li>
+                          <li><a href="">フォルダ</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-9" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">カスタムアパレル</a></li>
+                          <li><a href="">ドリンクウェア</a></li>
+                          <li><a href="">筆記具</a></li>
+                          <li><a href="">テクノロジー</a></li>
+                          <li><a href="">パッグ＆トート</a></li>
+                          <li><a href="">展示会</a></li>
+                          <li><a href="">アウトドアスポーツ</a></li>
+                          <li><a href="">賞とトロフィー</a></li>
+                          <li><a href="">オフィス用品</a></li>
+                          <li><a href="">ホーム＆パーソナルケア</a></li>
+                          <li><a href="">カレンダー＆プランナー</a></li>
+                          <li><a href="">フェザーフラッグ</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-10" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">ホリデーソリューション</a></li>
+                          <li><a href="">パーソナルケア ソリューション
+                            </a></li>
+                          <li><a href="">オートモーティブソリューション</a></li>
+                          <li><a href="">キャンペーン ソリューション
+                            </a></li>
+                          <li><a href="">サイドハッスルソリューション</a></li>
+                          <li><a href="">法務サービス ソリューション</a></li>
+                          <li><a href="">季節の観光ソリューション</a></li>
+                          <li><a href="">非営利ソリューション</a></li>
+                          <li><a href="">建設ソリューション</a></li>
+                          <li><a href="">ヘルス＆ウェルネスソリューション</a></li>
+                          <li><a href="">ウェディングプランニングソリューシ</a></li>
+                          <li><a href="">会計ソリューション</a></li>
+                        </ul>
+                        <ul class="tabcontent-container-secondlist">
+                          <li><a href="">不動産ソリューション</a></li>
+                          <li><a href="">スモールピジネスソリューション</a></li>
+                          <li><a href="">トラベルプリントソリューション</a></li>
+                          <li><a href="">ヘルスケアソリューション</a></li>
+                          <li><a href="">リテールプリントソリューション</a></li>
+                          <li><a href="">レストランソリューション</a></li>
+                          <li><a href="">コミュニティイベント ソリューション</a></li>
+                          <li><a href="">教育ソリューション</a></li>
+                          <li><a href="">造園ソリューション</a></li>
+                          <li><a href="">Covd-19 ソリューション</a></li>
+                          <li><a href="">印刷およびマーケティング機能</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-11" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">ピジネスフォーム</a></li>
+                          <li><a href="">小切手</a></li>
+                          <li><a href="">ダイレクトメール</a></li>
+                          <li><a href="">オンライン マーケティング サービス</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_giftwrap_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>ギフトラップ</h3>
+                          <p>購入品を梱包し、ブランドを売り込みます。</p>
+                          <a href="" class="clearfix-btn">始めましょう</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">名刺</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+
+                    <div class="tab">
+                      <button class="tablinks no-arrow" onmouseover="openCity(event, 'category2-1')">すべての名刺</button>
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category2-2')">カードの種類</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category2-3')">業界</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category2-4')">オプション</button>
+                    </div>
+
+                    <div id="category2-1" class="tabcontent">
+                      <div class="tabcontent-container">
+
+                      </div>
+                    </div>
+
+                    <div id="category2-2" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのカードの種類</a></li>
+                          <li><a href="">従来の名刺</a></li>
+                          <li><a href="">隆起プリント名刺</a></li>
+                          <li><a href="">エグゼクティブ名刺超厚手名刺</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category2-3" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての産業</a></li>
+                          <li><a href="">教育不動産</a></li>
+                          <li><a href="">協会と組織</a></li>
+                          <li><a href="">食料と飲料</a></li>
+                          <li><a href="">ヘルス＆ウェルネス</a></li>
+                          <li><a href="">アート＆エンターテイメント</a></li>
+                          <li><a href="">建設、修理、改善</a></li>
+                          <li><a href="">プロフェッショナル</a></li>
+                          <li><a href="">写真撮影</a></li>
+                          <li><a href="">テクノロジー</a></li>
+                          <li><a href="">ウェディング＆パーティープランニング</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category2-4" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">同日名刺</a></li>
+                          <li><a href="">独自のデザインをアップロード</a></li>
+                          <li><a href="">すべてのデザインを閲覧</a></li>
+                          <li><a href="">自分で作る</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_businesscards_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>名刺</h3>
+                          <p>このホリデーシーズンにぜひご覧ください。</p>
+                          <a href="" class="clearfix-btn">始めましょう</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">サイン、バナー、ポスター</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+                    <div class="tab">
+                      <button class="tablinks no-arrow"
+                        onmouseover="openCity(event, 'category3-1')">すべてのサイン、バナー、ポスター</button>
+                      <button class="tablinks tablinks_first" onmouseover="openCity(event, 'category3-2')">標識</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category3-3')">バナー</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category3-4')">ポスター</button>
+                    </div>
+                    <div id="category3-1" class="tabcontent">
+                      <div class="tabcontent-container">
+
+                      </div>
+                    </div>
+
+                    <div id="category3-2" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべて見る</a></li>
+                          <li><a href="">ヤードサイン</a></li>
+                          <li><a href="">Aフレーム</a></li>
+                          <li><a href="">ウィンドウデカール</a></li>
+                          <li><a href="">フェザーフラッグ</a></li>
+                          <li><a href="">スナップ フレームサイン</a></li>
+                          <li><a href="">フロアデカール</a></li>
+                          <li><a href="">吊り下げ看板</a></li>
+                          <li><a href="">ウォールデカール</a></li>
+                          <li><a href="">磁気車の標識</a></li>
+                          <li><a href="">屋外看板</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category3-3" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべて見る</a></li>
+                          <li><a href="">バナー</a></li>
+                          <li><a href="">バナースタンド</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category3-4" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべて見る</a></li>
+                          <li><a href="">ポスター</a></li>
+                          <li><a href="">粘着ポスター</a></li>
+                          <li><a href="">発泡ボードのポスター</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_signsbannersposters_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>サイン、バナー、ポスター</h3>
+                          <p>あなたのビジネスに光を当てましょう。</p>
+                          <a href="" class="clearfix-btn">今すぐ購入</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">カードと紹介状</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+
+                    <div class="tab">
+                      <button class="tablinks no-arrow"
+                        onmouseover="openCity(event, 'category4-1')">すべてのカードと招待状</button>
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category4-2')">カードと招待状</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category4-3')">お知らせ</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category4-4')">招待状</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category4-5')">行事</button>
+                    </div>
+
+                    <div id="category4-1" class="tabcontent">
+                      <div class="tabcontent-container">
+
+                      </div>
+                    </div>
+
+                    <div id="category4-2" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのカードと招待状</a></li>
+                          <li><a href="">独自のアップロード</a></li>
+                          <li><a href="">ホリデー</a></li>
+                          <li><a href="">ビジネスのご挨拶</a></li>
+                          <li><a href="">結婚式</a></li>
+                          <li><a href="">赤ちゃん</a></li>
+                          <li><a href="">招待状</a></li>
+                          <li><a href="">メモリアル</a></li>
+                          <li><a href="">ありがとうございました</a></li>
+                          <li><a href="">日常のあいさつ</a></li>
+                          <li><a href="">お知らせ</a></li>
+                          <li><a href="">誕生日</a></li>
+                          <li><a href="">卒業</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category4-3" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのお知らせ</a></li>
+                          <li><a href="">卒業発表</a></li>
+                          <li><a href="">結婚式のお知らせ</a></li>
+                          <li><a href="">誕生のお知らせ</a></li>
+                          <li><a href="">事業発表</a></li>
+                          <li><a href="">引越しのお知らせ</a></li>
+                          <li><a href="">採用発表</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category4-4" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての招待状</a></li>
+                          <li><a href="">ホリデーパーティーの招待状</a></li>
+                          <li><a href="">日付の招待状を保存</a></li>
+                          <li><a href="">結婚式招待状</a></li>
+                          <li><a href="">カクテル パーティーの招待状</a></li>
+                          <li><a href="">ビジネス招待状</a></li>
+                          <li><a href="">ベビーシャワーの招待状</a></li>
+                          <li><a href="">ブライダル シャワーの招待状</a></li>
+                          <li><a href="">誕生日の招待状</a></li>
+                          <li><a href="">一般的なカスタム招待状</a></li>
+                          <li><a href="">子供の誕生日パーティーの招待状</a></li>
+                          <li><a href="">卒業招待状</a></li>
+                          <li><a href="">退職パーティーの招待状</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category4-5" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての機会</a></li>
+                          <li><a href="">ハロウィン</a></li>
+                          <li><a href="">感謝祭</a></li>
+                          <li><a href="">ホリデー</a></li>
+                          <li><a href="">結婚式</a></li>
+                          <li><a href="">ベビーシャワー</a></li>
+                          <li><a href="">ブライダルシャワー</a></li>
+                          <li><a href="">メモリアル</a></li>
+                          <li><a href="">誕生日</a></li>
+                          <li><a href="">バレンタイン・デー</a></li>
+                          <li><a href="">イースター</a></li>
+                          <li><a href="">卒業</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_cardsinvites_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>カードと招待状</h3>
+                          <p>クライアント、同僚、愛する人に最適です。</p>
+                          <a href="" class="clearfix-btn">始めましょう</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">ドキュメントの印刷</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+                    <div class="tab">
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category5-1')">全文書印刷</button>
+                    </div>
+                    <div id="category5-1" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">全文書印刷</a></li>
+                          <li><a href="">シンプルプリント</a></li>
+                          <li><a href="">プロフェッショナルプリント</a></li>
+                          <li><a href="">小冊子</a></li>
+                          <li><a href="">設計図</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/746_janhp_nd_documentprinting.jpg" alt="">
+                        <figcaption>
+                          <h3>ドキュメントの印刷</h3>
+                          <p>高品質のドキュメントと設計図が利用できるようになりました。</p>
+                          <a href="" class="clearfix-btn">始めましょう</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list pick-up">
+              <a href="#">当日受け取り</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+                    <div class="tab">
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category6-1')">当日受け取り</button>
+                    </div>
+                    <div id="category6-1" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべて同日ピックアップ</a></li>
+                          <li><a href="">名刺はがき</a></li>
+                          <li><a href="">広告ラベル</a></li>
+                          <li><a href="">カードと招待状</a></li>
+                          <li><a href="">返品先住所ラベル</a></li>
+                          <li><a href="">ドキュメントの印刷</a></li>
+                          <li><a href="">ポスター</a></li>
+                          <li><a href="">チラシ</a></li>
+                          <li><a href="">パンフレット</a></li>
+                          <li><a href="">設計図</a></li>
+                          <li><a href="">屋内バナー</a></li>
+                          <li><a href="">プレインクスタンプ</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_advertisinglabels_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>午後2時までのご注文で当日集荷</h3>
+                          <p>ブランドに休日のリフレッシュを与えましょう。</p>
+                          <a href="" class="clearfix-btn">今すぐ購入</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">印刷のソリューション</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+
+                    <div class="tab">
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category7-1')">すべての印刷ソリューション</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category7-2')">インスピレーションを得ます</button>
+                    </div>
+
+                    <div id="category7-1" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての印刷ソリューションを見る</a></li>
+                          <li><a href="">ホリデーソリューション</a></li>
+                          <li><a href="">パーソナルケア ソリューション</a></li>
+                          <li><a href="">オートモーティブ ソリューション</a></li>
+                          <li><a href="">キャンペーン ソリューション</a></li>
+                          <li><a href="">サイドハッスルソリューション</a></li>
+                          <li><a href="">法務サービス ソリューション</a></li>
+                          <li><a href="">季節の観光ソリューション</a></li>
+                          <li><a href="">非営利ソリューション</a></li>
+                          <li><a href="">建設ソリューション</a></li>
+                          <li><a href="">ヘルス＆ウェルネス ソリューション</a></li>
+                          <li><a href="">ウェディングプランニングソリューション</a></li>
+                          <li><a href="">会計ソリューション</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category7-2" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">#lovemystaplesprints</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/746_janhp_nd_posters.jpg" alt="">
+                        <figcaption>
+                          <h3>産業用印刷ソリューション</h3>
+                          <p>ブランドを構築するためのオンデマンド デザイン。</p>
+                          <a href="" class="clearfix-btn">もっと詳しく知る</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="menu-underlay"></div>
+      <div class="header__sp-category">
+        <nav>
+          <ul>
+            <li class="has-child _main-ttl">
+              <a href="#">すべての製品</a>
+              <div class="mobile-close">
+                <span></span>
+                <span></span>
+              </div>
+              <ul>
+                <li class="has-child _sub-ttl">
+                  <a href="#">名刺</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての名刺</a></li>
+                    <li><a href="#">従来の名刺</a></li>
+                    <li><a href="#">隆起プリント名刺</a></li>
+                    <li><a href="#">エグゼクティブ名刺</a></li>
+                    <li><a href="#">超厚手名刺</a></li>
+                    <li><a href="#">ポイントカード</a></li>
+                    <li><a href="#">予約カード</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">サイン、バナー、ポスター</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべてのサイン、バナー、ポスター</a></li>
+                    <li><a href="#">ヤードサイン</a></li>
+                    <li><a href="#">Aフレーム</a></li>
+                    <li><a href="#">ウインドウデカール</a></li>
+                    <li><a href="#">フェザーフラッグ</a></li>
+                    <li><a href="#">スナップフレームサイン</a></li>
+                    <li><a href="#">フロアデカール</a></li>
+                    <li><a href="#">吊り下げ看板</a></li>
+                    <li><a href="#">ウォールデカール</a></li>
+                    <li><a href="#">磁気車の標識</a></li>
+                    <li><a href="#">屋外看板</a></li>
+                    <li><a href="#">バナー</a></li>
+                    <li><a href="#">バナースタンド</a></li>
+                    <li><a href="#">ポスター</a></li>
+                    <li><a href="#">発泡ボードのポスター</a></li>
+                    <li><a href="#">粘着ポスター</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl"><a href="#">カードと招待状</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべてのカードと招待状</a></li>
+                    <li><a href="#">独自のアップロード</a></li>
+                    <li><a href="#">ホリデー</a></li>
+                    <li><a href="#">ビジネスのご挨拶</a></li>
+                    <li><a href="#">結婚式</a></li>
+                    <li><a href="#">赤ちゃん</a></li>
+                    <li><a href="#">招待状</a></li>
+                    <li><a href="#">メモリアル</a></li>
+                    <li><a href="#">ありがとうございました</a></li>
+                    <li><a href="#">お知らせ</a></li>
+                    <li><a href="#">誕生日</a></li>
+                    <li><a href="#">卒業</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">ドキュメントの印刷</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">全文書印刷</a></li>
+                    <li><a href="#">シンプルプリント</a></li>
+                    <li><a href="#">プロフェッショナルプリント</a></li>
+                    <li><a href="#">小冊子</a></li>
+                    <li><a href="#">設計図</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">文房具</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての文房具</a></li>
+                    <li><a href="#">切手</a></li>
+                    <li><a href="#">封筒</a></li>
+                    <li><a href="#">返品先住所ラベル</a></li>
+                    <li><a href="#">宛名ラベル</a></li>
+                    <li><a href="#">レターヘッド</a></li>
+                    <li><a href="#">エグゼクティブレターヘッド</a></li>
+                    <li><a href="#">ノートカード</a></li>
+                    <li><a href="#">メモ帳</a></li>
+                    <li><a href="#">ネームタグ</a></li>
+                    <li><a href="#">刻印デスクネームプレート</a></li>
+                    <li><a href="#">刻まれたドアと壁のサイン</a></li>
+                    <li><a href="#">ノートブック</a></li>
+                    <li><a href="#">エンボス</a></li>
+                    <li><a href="#">ポストイット</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">カスタムスタンプ</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての切手と公証人</a></li>
+                    <li><a href="#">テキスタイルスタンプ</a></li>
+                    <li><a href="#">公証人スタンプ</a></li>
+                    <li><a href="#">プレインクスタンプ</a></li>
+                    <li><a href="#">日付スタンプ</a></li>
+                    <li><a href="#">インク付き住所スタンプ</a></li>
+                    <li><a href="#">インク付き保証スタンフ</a></li>
+                    <li><a href="#">インク入りメッセージスタンプ</a></li>
+                    <li><a href="#">インク付き署名スタンプ</a></li>
+                    <li><a href="#">ゴム印</a></li>
+                    <li><a href="#">セルフインクスタンプ</a></li>
+                    <li><a href="#">スタンプリフィル＆アクセサリー</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">フォトギフト</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべてのフォトギフト</a></li>
+                    <li><a href="#">ギフトラップ</a></li>
+                    <li><a href="#">カスタムウォールアート</a></li>
+                    <li><a href="#">フォトマグ</a></li>
+                    <li><a href="#">個人カレンダー</a></li>
+                    <li><a href="#">装飾品</a></li>
+                    <li><a href="#">フォトブランケット</a></li>
+                    <li><a href="#">フォトパズル</a></li>
+                    <li><a href="#">ボーダープリント</a></li>
+                    <li><a href="#">フォトコースター</a></li>
+                    <li><a href="#">フォトマウスバッド</a></li>
+                    <li><a href="#">写真ポスター</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">販売およびマーケティング資料</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての販売およびマーケティング資料</a></li>
+                    <li><a href="#">ラベル＆ステッカー</a></li>
+                    <li><a href="#">チラシ</a></li>
+                    <li><a href="#">はがき</a></li>
+                    <li><a href="#">パンフレット</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">予約カード</a></li>
+                    <li><a href="#">ポイントカード</a></li>
+                    <li><a href="#">ラックカード</a></li>
+                    <li><a href="#">磁石</a></li>
+                    <li><a href="#">ネームタグ</a></li>
+                    <li><a href="#">商品券</a></li>
+                    <li><a href="#">フォルダ</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">販促品</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての販促品</a></li>
+                    <li><a href="#">カスタムアパレル</a></li>
+                    <li><a href="#">ドリンクウェア</a></li>
+                    <li><a href="#">筆記具</a></li>
+                    <li><a href="#">テクノロジー</a></li>
+                    <li><a href="#">バッグ＆トート</a></li>
+                    <li><a href="#">展示会</a></li>
+                    <li><a href="#">アウトドアスポーツ</a></li>
+                    <li><a href="#">賞とトロフィー</a></li>
+                    <li><a href="#">オフィス用品</a></li>
+                    <li><a href="#">ホーム＆パーソナルケア</a></li>
+                    <li><a href="#">カレンダー＆プランナー</a></li>
+                    <li><a href="#">フェザーフラッグ</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">印刷のソリューション</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての印刷ソリューション</a></li>
+                    <li><a href="#">ホリデーソリューション</a></li>
+                    <li><a href="#">パーソナルケアソリューション</a></li>
+                    <li><a href="#">オートモーティブソリューション</a></li>
+                    <li><a href="#">キャンペーンソリューション</a></li>
+                    <li><a href="#">サイドハッスルソリューション</a></li>
+                    <li><a href="#">法務サービスソリューション</a></li>
+                    <li><a href="#">季節の観光ソリューション</a></li>
+                    <li><a href="#">非営利ソリューション</a></li>
+                    <li><a href="#">建設ソリューション</a></li>
+                    <li><a href="#">ヘルス＆ウェルネスソリューション</a></li>
+                    <li><a href="#">ウェディングプランニングソリューション</a></li>
+                    <li><a href="#">会計ソリューション</a></li>
+                    <li><a href="#">不動産ソリューション</a></li>
+                    <li><a href="#">スモールビジネスソリューション</a></li>
+                    <li><a href="#">トラベルプリントソリューション</a></li>
+                    <li><a href="#">ヘルスケアソリューション</a></li>
+                    <li><a href="#">リテールプリントソリューション</a></li>
+                    <li><a href="#">レストランソリューション</a></li>
+                    <li><a href="#">コミュニティイベントソリューション</a></li>
+                    <li><a href="#">教育ソリューション</a></li>
+                    <li><a href="#">造園ソリューション</a></li>
+                    <li><a href="#">Covid-19ソリューション</a></li>
+                    <li><a href="#">印刷およびマーケティング機能</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">その他のビジネスソリューション</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">その他のビジネスソリューション</a></li>
+                    <li><a href="#">ビジネスフォーム</a></li>
+                    <li><a href="#">小切手</a></li>
+                    <li><a href="#">ダイレクトメール</a></li>
+                    <li><a href="#">オンラインマーケティングサービス</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div id="main-content" role="main" class="wrapper"
+    style="background-image: url(./images/image1.jpeg);background-position: center;background-repeat: no-repeat;">
+    <div class="row account-container">
+      <div class="grid-50 login-header">
+        <div class="container">
+        </div>
+      </div>
+      <div class="grid-50 grid-sm-100 sign-in-up">
+        <div class="container">
+          <div class="sign-in-box">
+            <div class="sign-in-form">
+              <h1 class="sc-bmzYkS bPrdXk">アカウントを作成する</h1>
+              <div class="sc-iHGNWf iaqEFt">
+                <form>
+                  <div class="sc-kOPcWz hpMIfZ">
+                    <div id="usernameField" class="sc-dtInlm wAMwC">
+                      <div class="sc-p36blq-0 kvoFUS">
+                        <div class="sc-p36blq-1 uVxjb">
+                          <div class="sc-ei0bxb-7 esvEre">
+                            <div class="sc-ei0bxb-2 bjdA-Df">
+                              <label class="sc-ei0bxb-1 ktBZGa">
+                                ファーストネーム<span aria-hidden="true">*</span>
+                              </label>
+                              <div aria-label="inputBoxWrapper" class="sc-ei0bxb-0 ifVZtF">
+                                <div class="sc-ei0bxb-9 kpeTUH"><input
+                                    style="width: 100%;height: 100%;border: none;outline: none;box-sizing: border-box;"
+                                    name="firstName" placeholder="" type="text" maxlength="15" id="firstName"
+                                    autocomplete="on" aria-label="ファーストネーム" aria-required="true"
+                                    class="sc-ei0bxb-8 dNkcIE" value="KOUTA"></div>
+                                <div class="sc-ei0bxb-3 grhtJC"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="sc-p36blq-0 kvoFUS">
+                        <div class="sc-p36blq-1 uVxjb">
+                          <div class="sc-ei0bxb-7 esvEre">
+                            <div class="sc-ei0bxb-2 bjdA-Df"><label class="sc-ei0bxb-1 ktBZGa">
+                                苗字<span aria-hidden="true">*</span>
+                              </label>
+                              <div aria-label="inputBoxWrapper" class="sc-ei0bxb-0 ifVZtF">
+                                <div class="sc-ei0bxb-9 kpeTUH"><input
+                                    style="width: 100%;height: 100%;border: none;outline: none;box-sizing: border-box;"
+                                    name="lastName" placeholder="" type="text" maxlength="20" id="lastName"
+                                    autocomplete="on" aria-label="苗字" aria-required="true" class="sc-ei0bxb-8 dNkcIE"
+                                    value="SHIRATORI"></div>
+                                <div class="sc-ei0bxb-3 grhtJC"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="sc-p36blq-0 kvoFUS">
+                        <div class="sc-p36blq-1 uVxjb">
+                          <div class="sc-ei0bxb-7 esvEre">
+                            <div class="sc-ei0bxb-2 bjdA-Df"><label class="sc-ei0bxb-1 ktBZGa">
+                                Eメール
+                                <span aria-hidden="true">
+                                  *
+                                </span>
+                              </label>
+                              <div aria-label="inputBoxWrapper" class="sc-ei0bxb-0 ifVZtF">
+                                <div class="sc-ei0bxb-9 kpeTUH"><input
+                                    style="width: 100%;height: 100%;border: none;outline: none;box-sizing: border-box;"
+                                    name="email" placeholder="" type="email" id="email" autocomplete="on"
+                                    aria-label="Eメール" aria-required="true" class="sc-ei0bxb-8 dNkcIE"
+                                    value="swan.kouta@gmail.com"></div>
+                                <div class="sc-ei0bxb-3 grhtJC"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sc-p36blq-0 kvoFUS">
+                      <div class="sc-p36blq-1 uVxjb">
+                        <div class="sc-ei0bxb-7 esvEre">
+                          <div class="sc-ei0bxb-2 bjdA-Df"><label class="sc-ei0bxb-1 ktBZGa">パスワード<span
+                                aria-hidden="true">*</span></label>
+                            <div class="sc-ei0bxb-0 ifVZtF">
+                              <div class="sc-ei0bxb-9 kpeTUH">
+                                <input
+                                  style="width: 100%;height: 100%;border: none;outline: none;box-sizing: border-box;"
+                                  type="password" name="password" placeholder="" value="" maxlength="50"
+                                  id="loginPassword" autocomplete="on" aria-label="password" aria-required="true"
+                                  class="sc-ei0bxb-8 bCsBCM">
+                              </div>
+                              <div class="sc-ei0bxb-3 grhtJC">
+                                <button id="showPasswordButton" aria-label="Show password" type="button"
+                                  class="sc-ei0bxb-4 ipBJEQ">
+                                  <svg id="passwordIcon" viewBox="0 0 40 40" focusable="false" aria-hidden="true"
+                                    size="16" height="16px" width="16px" color="dark_gray_1"
+                                    class="sc-14dq9fm-0 gennuQ">
+                                    <g fill-rule="evenodd">
+                                      <path
+                                        d="M19.6399317,7.50022103 L20.0210836,7.50184449 L20.5882234,7.50356317 C26.8879384,7.64415738 33.826546,11.6513502 38.9687714,17.3050762 C40.3467707,18.8349122 40.3467707,21.1584211 38.9651326,22.6922794 C33.6583819,28.5326005 26.4944225,32.60614 20.0210336,32.4964897 L20.0210336,32.4964897 L19.4610042,32.4956988 C13.0973574,32.3718856 6.19021469,28.3648925 1.03622859,22.6882572 C-0.341770668,21.1584211 -0.341770668,18.8349122 1.03979925,17.301129 C6.35170045,11.454187 13.5556445,7.39277729 20.0210836,7.50184449 Z M20.5567968,10.003247 L19.4643811,10.003247 C13.9496171,10.1329514 7.61576741,13.7806549 2.89377141,18.9782572 C2.37238172,19.5570969 2.37238172,20.4362364 2.89045873,21.0114131 C7.75458469,26.3687811 14.301393,30.0923931 20.0210336,29.9968436 L20.0210336,29.9968436 L20.5394888,29.9950707 C26.0937368,29.8652464 32.393641,26.2069794 37.1112286,21.0150762 C37.6326183,20.4362364 37.6326183,19.5570969 37.115278,18.982731 C32.3962315,13.7942977 26.0443526,10.1259531 20.5567968,10.003247 L20.5567968,10.003247 Z M20.0000003,12.4983331 L20.3964014,12.5087201 C22.2416055,12.6059192 23.9915227,13.3819268 25.3044967,14.695251 C26.7112546,16.102384 27.5010613,18.0109455 27.5000003,20.0003334 C27.4988954,24.1422085 24.1405421,27.4990695 19.998667,27.4983331 C15.8567918,27.497597 12.4996322,24.1395421 12.5000003,19.9976668 C12.5003683,15.8557915 15.8581248,12.4983331 20.0000003,12.4983331 L20.0000003,12.4983331 Z M20.0003334,14.9983329 C17.23875,14.9983329 15.0002456,17.2366388 15.0000002,19.997889 C14.9997549,22.7591392 17.2378613,24.9978424 19.9991114,24.9983329 C22.7603615,24.9988241 24.9992638,22.7609167 25.0000002,19.9993333 C25.0007078,18.6729997 24.4742285,17.4007667 23.5364941,16.4627823 C22.5987597,15.5247978 21.3266671,14.9979793 20.0003334,14.9983329 Z"
+                                        fill="inherit"></path>
+                                    </g>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="password-criteria__sparq_PasswordCriteriaLayout password-criteria__sparq_PasswordCriteriaLayoutPNI"
+                      data-testid="password_criteria_001">
+                      <div class="password-criteria__sparq_ValidationInstructions" data-testid="password_criteria_002">
+                        最小 8 文字、大文字と小文字が区別され、スペースは含まれません。
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sc-1tlna7a-0 iFpsqc"><button tabindex="0" type="submit" width="100%" id="loginBtn"
+                      class="sc-1gktvoi-0 bEtTzz"><span class="sc-1gktvoi-1 jtvEdo">アカウントを作成する</span></button></div>
+                  <input name="nds-pmd" type="hidden">
+                </form>
+              </div>
+              <div class="sc-eDPEul iQombN">
+                <div id="dotcom_loginform_createsection_donthaveaccount_txt2" class="sc-dLMFU jnwruv">すでにアカウントをお持ちですか？
+                </div>
+                <div color="link_blue" id="loginCreateBtn" class="sc-izol8d-0 bgSERk"><a aria-label="Create account"
+                    role="button" tabindex="0" target="_self">ログイン</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer" style="margin-top: 0;">
+    <div class="footer__inner l__content">
+      <div class="footer__nav">
+        <ul class="footer__nav--list">
+          <li class="footer__nav--item footer__logo">
+            <img src="./images/logo-staples-footer-grey.svg" alt="">
+          </li>
+          <li class="footer__nav--item">
+            <h6 class="footer__nav--ttl">約</h6>
+            <a href="" class="footer__nav--anotherLink">印刷およびマーケティングサービスへのお問い合わせ</a>
+            <a href="" class="footer__nav--anotherLink">画像保存ポリシー</a>
+            <a href="" class="footer__nav--anotherLink">プライバシーポリシー</a>
+            <a href="" class="footer__nav--anotherLink">規約と条件</a>
+          </li>
+          <li class="footer__nav--item">
+            <h6 class="footer__nav--ttl">クイックリンク</h6>
+            <a href="" class="footer__nav--anotherLink">マイプロジェクト</a>
+            <a href="" class="footer__nav--anotherLink">私の注文</a>
+            <a href="" class="footer__nav--anotherLink">店舗検索機能</a>
+          </li>
+          <li class="footer__nav--item">
+            <h6 class="footer__nav--ttl">その他のビジネスソリューション</h6>
+            <a href="" class="footer__nav--anotherLink">ビジネスフォーム</a>
+            <a href="" class="footer__nav--anotherLink">小切手</a>
+            <a href="" class="footer__nav--anotherLink">販促品</a>
+            <a href="" class="footer__nav--anotherLink">オンライン マーケティング サービス</a>
+          </li>
+          <li class="footer__nav--item footer-social-media">
+            <h6 class="footer__nav--ttl">参加してください</h6>
+            <div class="social-links-container">
+              <a href="" class="footerTwitter"><span class="sr-only">Twitter</span></a>
+              <a href="" class="footerFacebook"><span class="sr-only">Facebook</span></a>
+              <a href="" class="footerYoutube"><span class="sr-only">Youtube</span></a>
+              <a href="" class="footerLinkedin"><span class="sr-only">Linkedin</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer__copyright--container">
+          <div class="footer__copyright--txt">
+            <p>このウェブサイトは、米国居住者のみが使用することを意図しています。<br class="sp_br">Staples, Inc.、無断複写・転載を禁じます。</p>
+          </div>
+          <div class="footer__copyright--policy">
+            <a href="" class="">詳細については、配送ポリシーをご覧ください</a>
+            <a href="" class="">© 1998-2022</a>
+          </div>
+          <div class="footer__copyright--cookie">
+            <a href="" class="">クッキーの設定</a>
+            <a href="" class="">私の個人情報を販売しないでください</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./js/inview.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/main.js" defer></script>
+  <script>
+    const showPasswordButton = document.getElementById('showPasswordButton');
+    const passwordField = document.getElementById('loginPassword');
+
+    showPasswordButton.addEventListener('click', function () {
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+      } else {
+        passwordField.type = 'password';
+      }
+    });
+  </script>
+  <script>
+    const togglePasswordButton = document.getElementById('showPasswordButton');
+    const passwordIcon = document.getElementById('passwordIcon');
+
+    togglePasswordButton.addEventListener('click', function () {
+      // SVG画像を切り替える処理
+      if (passwordIcon.classList.contains('gennuQ')) {
+        passwordIcon.classList.remove('gennuQ');
+        passwordIcon.classList.add('iMTWEo');
+        passwordIcon.innerHTML = '<g fill-rule="evenodd"><path d="M15.619,26.186a1.17,1.17,0,0,0,.112-.056,1.241,1.241,0,0,0,.343-.381L29.262,13.09c.017-.014.031-.032.048-.047L36.749,5.9a1.25,1.25,0,0,0-1.73-1.8L28.235,10.61a20.2,20.2,0,0,0-8.213-1.86c-7.313-.116-14.6,4.984-18.98,9.809a3.979,3.979,0,0,0-.007,5.374,34.492,34.492,0,0,0,7.071,6L3.768,34.1A1.249,1.249,0,1,0,5.5,35.9l5.226-5.017.554-.532Zm-.514-5.649a5.152,5.152,0,0,1,6.943-3.987L15.328,23A5.133,5.133,0,0,1,15.105,20.537ZM2.892,22.259a1.493,1.493,0,0,1,0-2.02c3.824-4.217,10.579-9.122,17.094-8.989a17.686,17.686,0,0,1,6.29,1.24l-2.3,2.209a7.7,7.7,0,0,0-8.254.446,7.651,7.651,0,0,0-2.331,9.716L9.962,28.152A32.041,32.041,0,0,1,2.892,22.259ZM38.958,23.94c-4.31,4.765-11.467,9.812-18.715,9.812l-.347,0a17.694,17.694,0,0,1-5.268-.807,1.25,1.25,0,1,1,.744-2.386,15.269,15.269,0,0,0,4.551.693c.1,0,.2,0,.3,0,6.454,0,12.934-4.624,16.884-8.991a1.492,1.492,0,0,0,0-2.02,32.189,32.189,0,0,0-4.926-4.43,1.25,1.25,0,1,1,1.47-2.022,34.788,34.788,0,0,1,5.308,4.772A3.98,3.98,0,0,1,38.958,23.94ZM26.25,20a1.25,1.25,0,0,1,1.25,1.25,7.508,7.508,0,0,1-7.5,7.5,1.25,1.25,0,0,1,0-2.5,5.006,5.006,0,0,0,5-5A1.25,1.25,0,0,1,26.25,20Z" fill="inherit"></path></g>';
+      } else {
+        passwordIcon.classList.remove('iMTWEo');
+        passwordIcon.classList.add('gennuQ');
+        passwordIcon.innerHTML = '<g fill-rule="evenodd"><path d="M19.6399317,7.50022103 L20.0210836,7.50184449 L20.5882234,7.50356317 C26.8879384,7.64415738 33.826546,11.6513502 38.9687714,17.3050762 C40.3467707,18.8349122 40.3467707,21.1584211 38.9651326,22.6922794 C33.6583819,28.5326005 26.4944225,32.60614 20.0210336,32.4964897 L20.0210336,32.4964897 L19.4610042,32.4956988 C13.0973574,32.3718856 6.19021469,28.3648925 1.03622859,22.6882572 C-0.341770668,21.1584211 -0.341770668,18.8349122 1.03979925,17.301129 C6.35170045,11.454187 13.5556445,7.39277729 20.0210836,7.50184449 Z M20.5567968,10.003247 L19.4643811,10.003247 C13.9496171,10.1329514 7.61576741,13.7806549 2.89377141,18.9782572 C2.37238172,19.5570969 2.37238172,20.4362364 2.89045873,21.0114131 C7.75458469,26.3687811 14.301393,30.0923931 20.0210336,29.9968436 L20.0210336,29.9968436 L20.5394888,29.9950707 C26.0937368,29.8652464 32.393641,26.2069794 37.1112286,21.0150762 C37.6326183,20.4362364 37.6326183,19.5570969 37.115278,18.982731 C32.3962315,13.7942977 26.0443526,10.1259531 20.5567968,10.003247 L20.5567968,10.003247 Z M20.0000003,12.4983331 L20.3964014,12.5087201 C22.2416055,12.6059192 23.9915227,13.3819268 25.3044967,14.695251 C26.7112546,16.102384 27.5010613,18.0109455 27.5000003,20.0003334 C27.4988954,24.1422085 24.1405421,27.4990695 19.998667,27.4983331 C15.8567918,27.497597 12.4996322,24.1395421 12.5000003,19.9976668 C12.5003683,15.8557915 15.8581248,12.4983331 20.0000003,12.4983331 L20.0000003,12.4983331 Z M20.0003334,14.9983329 C17.23875,14.9983329 15.0002456,17.2366388 15.0000002,19.997889 C14.9997549,22.7591392 17.2378613,24.9978424 19.9991114,24.9983329 C22.7603615,24.9988241 24.9992638,22.7609167 25.0000002,19.9993333 C25.0007078,18.6729997 24.4742285,17.4007667 23.5364941,16.4627823 C22.5987597,15.5247978 21.3266671,14.9979793 20.0003334,14.9983329 Z"fill="inherit"></path></g>';
+      }
+    });
+  </script>
+</body>
+
+</html>

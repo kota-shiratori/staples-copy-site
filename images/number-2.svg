@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="74px" viewBox="0 0 55 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>2</title>
+    <defs>
+        <path d="M592.875,233 L592.875,220.4 L565.875,220.4 C567.075,218.54 568.575,216.875 570.375,215.405 C572.175,213.935 574.08,212.51 576.09,211.13 C578.1,209.75 580.095,208.355 582.075,206.945 C584.055,205.535 585.855,203.96 587.475,202.22 C589.095,200.48 590.4,198.5 591.39,196.28 C592.38,194.06 592.875,191.45 592.875,188.45 C592.875,185.63 592.365,183.02 591.345,180.62 C590.325,178.22 588.855,176.135 586.935,174.365 C585.015,172.595 582.69,171.2 579.96,170.18 C577.23,169.16 574.185,168.65 570.825,168.65 C566.445,168.65 562.815,169.415 559.935,170.945 C557.055,172.475 554.745,174.17 553.005,176.03 C550.965,178.25 549.405,180.74 548.325,183.5 L548.325,183.5 L559.125,188.9 C559.785,187.46 560.625,186.17 561.645,185.03 C562.545,184.07 563.67,183.2 565.02,182.42 C566.37,181.64 568.005,181.25 569.925,181.25 C572.625,181.25 574.8,182.03 576.45,183.59 C578.1,185.15 578.925,187.07 578.925,189.35 C578.925,191.69 578.175,193.7 576.675,195.38 C575.175,197.06 573.285,198.695 571.005,200.285 C568.725,201.875 566.265,203.54 563.625,205.28 C560.985,207.02 558.525,209.12 556.245,211.58 C553.965,214.04 552.075,216.98 550.575,220.4 C549.075,223.82 548.325,228.02 548.325,233 L548.325,233 L592.875,233 Z" id="path-1"></path>
+        <filter x="-21.3%" y="-10.1%" width="138.2%" height="126.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="-1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.208397072 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="PROFESSIONAL-PRINT-LP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440-Professional-Print-LP-Page-Layout" transform="translate(-542.000000, -740.000000)" fill-rule="nonzero">
+            <g id="2" transform="translate(0.000000, 574.000000)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#CC0000" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

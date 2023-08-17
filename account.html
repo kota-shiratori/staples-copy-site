@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マイページ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="account__page">
+  <header class="header">
+    <div class="header__inner l__content">
+      <div class="header__main">
+        <h1 class="header__logo"><a href=""><img src="./images/agereru_logo.png" alt=""></a></h1>
+        <form action="" class="main__search" id="searchbox">
+          <input class="search__input" type="text" id="search" name="search" value maxlength="60" placeholder="製品を検索">
+          <img src="./images/icon-close.png" alt="Close" class="token-input-btn">
+          <label for="search">
+            <span class="sr-only">検索</span>
+          </label>
+          <button class="searchBtn" type="submit">検索</button>
+          <img src="./images/icon-close.png" alt="Close" class="search-close">
+        </form>
+        <div class="nav-main__links">
+          <div class="loginform-container">
+            <ul class="account-navigation">
+              <li class="account-navigation-item item-hide">
+                <a href="">
+                  <span class="icon-navigation">
+                    <svg width="18" height="18" viewBox="0 0 18 18" class="svg">
+                      <defs>
+                        <path id="a"
+                          d="M1.8 10.8V8.1l4.5 1.8v2.7l-4.5-1.8zm6.3-2.12v9.005L.535 14.324A.9.9 0 0 1 0 13.5V4.999L8.1 8.68zm1.8 0L18 4.998V13.5c0 .357-.21.68-.535.824L9.9 17.685V8.68zm4.304-3.933L6.64.965 8.634.08a.9.9 0 0 1 .732 0l7.64 3.395-2.802 1.273zM4.51 1.912l7.585 3.794L9 7.112.995 3.474 4.51 1.912z" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h18v18H0z" />
+                        <mask id="b" fill="#fff">
+                          <use xlink:href="#a">
+                        </mask>
+                        <g fill-rule="nonzero" mask="url(#b)" class="svg-fill">
+                          <path d="M0 0h18v18H0z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  注文
+                </a>
+              </li>
+              <li class="account-navigation-item">
+                <a href="" class="">
+                  <span class="icon-navigation">
+                    <svg width="18" height="18" viewBox="0 0 18 18" class="svg">
+                      <defs>
+                        <path id="c"
+                          d="M.9 16.971C.9 13.337 4.231 10.8 9 10.8s8.1 2.537 8.1 6.171c0 .443-.581 1.029-1.298 1.029H2.198C1.477 18 .9 17.54.9 16.971zM9 9a4.505 4.505 0 0 1-4.5-4.5C4.5 2.018 6.518 0 9 0s4.5 2.018 4.5 4.5S11.482 9 9 9z" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h18v18H0z" />
+                        <g>
+                          <mask id="d" fill="#fff">
+                            <use xlink:href="#c" />
+                          </mask>
+                          <use fill="#A1A1A1" xlink:href="#c" />
+                          <g fill="#A1A1A1" fill-rule="nonzero" mask="url(#d)" class="svg-fill">
+                            <path d="M0 0h18v18H0z" />
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="item-hide">アカウント</span>
+                </a>
+                <ul class="account-dropdown-list _large" id="mobile-menu">
+                  <li class="account-dropdown-item">
+                    <a href=""><span class="icon-navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                          height="18" viewBox="0 0 18 18">
+                          <defs>
+                            <path id="c"
+                              d="M.9 16.971C.9 13.337 4.231 10.8 9 10.8s8.1 2.537 8.1 6.171c0 .443-.581 1.029-1.298 1.029H2.198C1.477 18 .9 17.54.9 16.971zM9 9a4.505 4.505 0 0 1-4.5-4.5C4.5 2.018 6.518 0 9 0s4.5 2.018 4.5 4.5S11.482 9 9 9z" />
+                          </defs>
+                          <g fill="none" fill-rule="evenodd">
+                            <path d="M0 0h18v18H0z" />
+                            <g>
+                              <mask id="d" fill="#fff">
+                                <use xlink:href="#c" />
+                              </mask>
+                              <use fill="#A1A1A1" xlink:href="#c" />
+                              <g fill="#A1A1A1" fill-rule="nonzero" mask="url(#d)">
+                                <path d="M0 0h18v18H0z" />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                      ログイン</a>
+                  </li>
+                  <li class="account-dropdown-item">
+                    <a href=""><span class="icon-navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                          <g fill="none" fill-rule="evenodd">
+                            <path d="M-1 0h18v18H-1z" />
+                            <g fill="#444">
+                              <path
+                                d="M4.079 16.259l-2.338-2.338-1.156 1.157.59.591L0 16.843 1.157 18l1.175-1.174.59.59zM1.753 11.584a.817.817 0 0 0 0 1.157l3.507 3.506a.817.817 0 0 0 1.157 0l7.615-7.615L9.369 3.97l-7.616 7.615z" />
+                              <path
+                                d="M16.936 4.57L13.43 1.065a.819.819 0 0 0-1.157 0l-.59.59L10.509.48a.819.819 0 0 0-1.157 0L4.09 5.74l1.157 1.157 4.681-4.682 5.26 5.26 1.747-1.747a.817.817 0 0 0 0-1.157" />
+                            </g>
+                          </g>
+                        </svg>
+                      </span>登録</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="account-navigation-item item-hide">
+                <a href="" class="">
+                  <span class="icon-navigation">
+                    <svg width="18" height="18" viewBox="0 0 18 18">
+                      <defs>
+                        <path id="h"
+                          d="M9.9 10.687V11.7H8.1V9H9a1.801 1.801 0 1 0-1.8-1.8H5.4c0-1.985 1.615-3.6 3.6-3.6s3.6 1.615 3.6 3.6a3.608 3.608 0 0 1-2.7 3.487M9 14.625a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25M9 0C4.037 0 0 4.037 0 9s4.037 9 9 9 9-4.037 9-9-4.037-9-9-9" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h18v18H0z" />
+                        <mask id="i" fill="#fff">
+                          <use xlink:href="#h" />
+                        </mask>
+                        <use fill="#A1A1A1" xlink:href="#h" />
+                        <g fill="#A1A1A1" fill-rule="nonzero" mask="url(#i)" class="svg-fill">
+                          <path d="M0 0h18v18H0z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  ヘルプ
+                </a>
+                <ul class="account-dropdown-list" id="mobile-menu">
+                  <li class="account-dropdown-item">
+                    <a href="">ヘルプセンター</a>
+                  </li>
+                  <li class="account-dropdown-item">
+                    <a href="">電話:000-0000</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="sp_account" href="">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <nav class="sp_nav">
+            <ul>
+              <li>
+                <a href="">
+                  <i class="fa-solid fa-user"></i>ログイン
+                </a>
+              </li>
+              <li><a href=""><span class="icon-navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M-1 0h18v18H-1z" />
+                        <g fill="#444">
+                          <path
+                            d="M4.079 16.259l-2.338-2.338-1.156 1.157.59.591L0 16.843 1.157 18l1.175-1.174.59.59zM1.753 11.584a.817.817 0 0 0 0 1.157l3.507 3.506a.817.817 0 0 0 1.157 0l7.615-7.615L9.369 3.97l-7.616 7.615z" />
+                          <path
+                            d="M16.936 4.57L13.43 1.065a.819.819 0 0 0-1.157 0l-.59.59L10.509.48a.819.819 0 0 0-1.157 0L4.09 5.74l1.157 1.157 4.681-4.682 5.26 5.26 1.747-1.747a.817.817 0 0 0 0-1.157" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  登録</a></li>
+              <li>
+                <a href=""> <span class="icon-navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                      height="18" viewBox="0 0 18 18">
+                      <defs>
+                        <path id="e"
+                          d="M1.8 10.8V8.1l4.5 1.8v2.7l-4.5-1.8zm6.3-2.12v9.005L.535 14.324A.9.9 0 0 1 0 13.5V4.999L8.1 8.68zm1.8 0L18 4.998V13.5c0 .357-.21.68-.535.824L9.9 17.685V8.68zm4.304-3.933L6.64.965 8.634.08a.9.9 0 0 1 .732 0l7.64 3.395-2.802 1.273zM4.51 1.912l7.585 3.794L9 7.112.995 3.474 4.51 1.912z" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h18v18H0z" />
+                        <mask id="f" fill="#fff">
+                          <use xlink:href="#e" />
+                        </mask>
+                        <g fill="#444" fill-rule="nonzero" mask="url(#f)">
+                          <path d="M0 0h18v18H0z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>注文</a>
+              </li>
+              <li><a href="">
+                  <i class="fa-solid fa-circle-question"></i>ヘルプセンター</a></li>
+              <li class="tel-info">
+                <span class="icon-navigation">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                    <g fill="none" fill-rule="evenodd">
+                      <path fill-rule="nonzero" d="M0 0h18v18H0z" />
+                      <path fill="#444"
+                        d="M13.563 14.098H10.9v-.015A6.658 6.658 0 0 1 4.516 7.7h-.015V5.035c0-.295.239-.533.533-.535l2.133.001c.294 0 .533.24.533.533v2.134a.533.533 0 0 1-.532.532H6.116a5.063 5.063 0 0 0 4.782 4.785v-1.053c0-.295.238-.535.534-.535l2.132.001c.294 0 .532.239.532.532l.002 2.133a.538.538 0 0 1-.535.535M9 0a9 9 0 1 0 .001 18 9 9 0 0 0 0-18" />
+                    </g>
+                  </svg>
+                </span>
+                <div class="tel-info-wrap">
+                  <p>カスタマーサービスに電話する</p>
+                  <p class="tel-num">000-0000</p>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="overlay"></div>
+          <div class="cart">
+            <ul class="account-navigation">
+              <li class="account-navigation-item cart-navigation">
+                <a href="" class="">
+                  <span class="icon-navigation cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </span>
+                  <span class="item-link item-hide">カート</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header__category">
+        <div class="header__category--inner">
+          <ul class="menu" id="menu">
+            <li class="menu_list">
+              <a href="#">すべての製品</a>
+              <div class="sp_close">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+                    <div class="tab">
+                      <button class="tablinks tablinks_first" onmouseover="openCity(event, 'category1-1')">名刺</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-2')">サイン、バナー、ポスター</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-3')">カードと招待状</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-4')">ドキュメントの印刷</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-5')">文房具</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-6')">カスタムスタンプ</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-7')">フォトギフド</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-8')">販売およびマーケティング資料</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-9')">販促品</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category1-10')">印別ソリューション</button>
+                      <button class="tablinks last-border-radius"
+                        onmouseover="openCity(event, 'category1-11')">その他のビジネスソリューション</button>
+                    </div>
+
+                    <div id="category1-1" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての名刺</a></li>
+                          <li><a href="">従来の名刺</a></li>
+                          <li><a href="">隆起プリント名刺</a></li>
+                          <li><a href="">エグゼクティブ名刺</a></li>
+                          <li><a href="">超厚手名刺</a></li>
+                          <li><a href="">ポイントカード</a></li>
+                          <li><a href="">予約カード</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-2" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのサイン、バナー、ポスター</a></li>
+                          <li><a href="">ヤードサイン</a></li>
+                          <li><a href="">Aフレーム</a></li>
+                          <li><a href="">ウィンドウデカール</a></li>
+                          <li><a href="">フェザーフラッグ</a></li>
+                          <li><a href="">スナップフレーム サイン</a></li>
+                          <li><a href="">フロアデカール</a></li>
+                          <li><a href="">品り下げ看板</a></li>
+                          <li><a href="">ウォールデカール</a></li>
+                          <li><a href="">磁気車の標識</a></li>
+                          <li><a href="">屋外看板</a></li>
+                          <li><a href="">パナー</a></li>
+                          <li><a href="">パナースタンド</a></li>
+                        </ul>
+
+                        <ul class="tabcontent-container-secondlist">
+                          <li><a href="">ポスター</a></li>
+                          <li><a href="">発泡ポードのポスター</a></li>
+                          <li><a href="">粘着ポスター</a></li>
+                        </ul>
+
+                      </div>
+                    </div>
+
+                    <div id="category1-3" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのカードと招待状</a></li>
+                          <li><a href="">独自のアップロード</a></li>
+                          <li><a href="">ホリデー</a></li>
+                          <li><a href="">ピジネスのご挨拶</a></li>
+                          <li><a href="">結婚式</a></li>
+                          <li><a href="">赤ちゃん</a></li>
+                          <li><a href="">招待状</a></li>
+                          <li><a href="">メモリアル</a></li>
+                          <li><a href="">ありがとうございました</a></li>
+                          <li><a href="">お知らせ</a></li>
+                          <li><a href="">誕生日</a></li>
+                          <li><a href="">卒業</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-4" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">全文書印刷</a></li>
+                          <li><a href="">シンプルプリント</a></li>
+                          <li><a href="">プロフェッショナルプリント</a></li>
+                          <li><a href="">小冊子</a></li>
+                          <li><a href="">設計囡</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-5" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">切手</a></li>
+                          <li><a href="">筒封</a></li>
+                          <li><a href="">返品先住所ラベル</a></li>
+                          <li><a href="">宛名ラベル</a></li>
+                          <li><a href="">レターヘッド</a></li>
+                          <li><a href="">エグゼクティブレターヘッド</a></li>
+                          <li><a href="">ノートカード</a></li>
+                          <li><a href="">メモ帳</a></li>
+                          <li><a href="">ネームタグ</a></li>
+                          <li><a href="">刻印デスクネームプレート</a></li>
+                          <li><a href="">刻まれたドアと壁の看板</a></li>
+                          <li><a href="">ノートブック</a></li>
+                        </ul>
+
+                        <ul class="tabcontent-container-secondlist">
+                          <li><a href="">エンポス</a></li>
+                          <li><a href="">ポストイット</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-6" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">テキスタイルスタンプ</a></li>
+                          <li><a href="">公証人スタンプ</a></li>
+                          <li><a href="">プレインクスタンプ</a></li>
+                          <li><a href="">日付スタンプ</a></li>
+                          <li><a href="">インク付き住所スタンプ</a></li>
+                          <li><a href="">インク付き保証スタンフ</a></li>
+                          <li><a href="">インク入りメッセージスタンプ</a></li>
+                          <li><a href="">インク付き署名スタンプ</a></li>
+                          <li><a href="">ゴム印</a></li>
+                          <li><a href="">セルフィンクスタンプ</a></li>
+                          <li><a href="">スタンプリフィル＆アクセサリー</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-7" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">ギフトラップ</a></li>
+                          <li><a href="">カスタムウォールアート</a></li>
+                          <li><a href="">フォトマグ</a></li>
+                          <li><a href="">個人カレンダー</a></li>
+                          <li><a href="">装飾品</a></li>
+                          <li><a href="">フォトブランケット</a></li>
+                          <li><a href="">フォトパズル</a></li>
+                          <li><a href="">ボーダープリント</a></li>
+                          <li><a href="">フォトコースター</a></li>
+                          <li><a href="">フォトマウスバッド</a></li>
+                          <li><a href="">写真ポスター</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-8" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">ラベル＆ステッカー</a></li>
+                          <li><a href="">チラシ</a></li>
+                          <li><a href="">はがき</a></li>
+                          <li><a href="">パンフレット</a></li>
+                          <li><a href="">メニュー</a></li>
+                          <li><a href="">予約カード</a></li>
+                          <li><a href="">ポイントカード</a></li>
+                          <li><a href="">ラックカード</a></li>
+                          <li><a href="">磁石</a></li>
+                          <li><a href="">ネームタグ</a></li>
+                          <li><a href="">商品券</a></li>
+                          <li><a href="">フォルダ</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-9" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">カスタムアパレル</a></li>
+                          <li><a href="">ドリンクウェア</a></li>
+                          <li><a href="">筆記具</a></li>
+                          <li><a href="">テクノロジー</a></li>
+                          <li><a href="">パッグ＆トート</a></li>
+                          <li><a href="">展示会</a></li>
+                          <li><a href="">アウトドアスポーツ</a></li>
+                          <li><a href="">賞とトロフィー</a></li>
+                          <li><a href="">オフィス用品</a></li>
+                          <li><a href="">ホーム＆パーソナルケア</a></li>
+                          <li><a href="">カレンダー＆プランナー</a></li>
+                          <li><a href="">フェザーフラッグ</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-10" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">ホリデーソリューション</a></li>
+                          <li><a href="">パーソナルケア ソリューション
+                            </a></li>
+                          <li><a href="">オートモーティブソリューション</a></li>
+                          <li><a href="">キャンペーン ソリューション
+                            </a></li>
+                          <li><a href="">サイドハッスルソリューション</a></li>
+                          <li><a href="">法務サービス ソリューション</a></li>
+                          <li><a href="">季節の観光ソリューション</a></li>
+                          <li><a href="">非営利ソリューション</a></li>
+                          <li><a href="">建設ソリューション</a></li>
+                          <li><a href="">ヘルス＆ウェルネスソリューション</a></li>
+                          <li><a href="">ウェディングプランニングソリューシ</a></li>
+                          <li><a href="">会計ソリューション</a></li>
+                        </ul>
+                        <ul class="tabcontent-container-secondlist">
+                          <li><a href="">不動産ソリューション</a></li>
+                          <li><a href="">スモールピジネスソリューション</a></li>
+                          <li><a href="">トラベルプリントソリューション</a></li>
+                          <li><a href="">ヘルスケアソリューション</a></li>
+                          <li><a href="">リテールプリントソリューション</a></li>
+                          <li><a href="">レストランソリューション</a></li>
+                          <li><a href="">コミュニティイベント ソリューション</a></li>
+                          <li><a href="">教育ソリューション</a></li>
+                          <li><a href="">造園ソリューション</a></li>
+                          <li><a href="">Covd-19 ソリューション</a></li>
+                          <li><a href="">印刷およびマーケティング機能</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category1-11" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">ピジネスフォーム</a></li>
+                          <li><a href="">小切手</a></li>
+                          <li><a href="">ダイレクトメール</a></li>
+                          <li><a href="">オンライン マーケティング サービス</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_giftwrap_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>ギフトラップ</h3>
+                          <p>購入品を梱包し、ブランドを売り込みます。</p>
+                          <a href="" class="clearfix-btn">始めましょう</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">名刺</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+
+                    <div class="tab">
+                      <button class="tablinks no-arrow" onmouseover="openCity(event, 'category2-1')">すべての名刺</button>
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category2-2')">カードの種類</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category2-3')">業界</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category2-4')">オプション</button>
+                    </div>
+
+                    <div id="category2-1" class="tabcontent">
+                      <div class="tabcontent-container">
+
+                      </div>
+                    </div>
+
+                    <div id="category2-2" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのカードの種類</a></li>
+                          <li><a href="">従来の名刺</a></li>
+                          <li><a href="">隆起プリント名刺</a></li>
+                          <li><a href="">エグゼクティブ名刺超厚手名刺</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category2-3" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての産業</a></li>
+                          <li><a href="">教育不動産</a></li>
+                          <li><a href="">協会と組織</a></li>
+                          <li><a href="">食料と飲料</a></li>
+                          <li><a href="">ヘルス＆ウェルネス</a></li>
+                          <li><a href="">アート＆エンターテイメント</a></li>
+                          <li><a href="">建設、修理、改善</a></li>
+                          <li><a href="">プロフェッショナル</a></li>
+                          <li><a href="">写真撮影</a></li>
+                          <li><a href="">テクノロジー</a></li>
+                          <li><a href="">ウェディング＆パーティープランニング</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category2-4" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">同日名刺</a></li>
+                          <li><a href="">独自のデザインをアップロード</a></li>
+                          <li><a href="">すべてのデザインを閲覧</a></li>
+                          <li><a href="">自分で作る</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_businesscards_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>名刺</h3>
+                          <p>このホリデーシーズンにぜひご覧ください。</p>
+                          <a href="" class="clearfix-btn">始めましょう</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">サイン、バナー、ポスター</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+                    <div class="tab">
+                      <button class="tablinks no-arrow"
+                        onmouseover="openCity(event, 'category3-1')">すべてのサイン、バナー、ポスター</button>
+                      <button class="tablinks tablinks_first" onmouseover="openCity(event, 'category3-2')">標識</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category3-3')">バナー</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category3-4')">ポスター</button>
+                    </div>
+                    <div id="category3-1" class="tabcontent">
+                      <div class="tabcontent-container">
+
+                      </div>
+                    </div>
+
+                    <div id="category3-2" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべて見る</a></li>
+                          <li><a href="">ヤードサイン</a></li>
+                          <li><a href="">Aフレーム</a></li>
+                          <li><a href="">ウィンドウデカール</a></li>
+                          <li><a href="">フェザーフラッグ</a></li>
+                          <li><a href="">スナップ フレームサイン</a></li>
+                          <li><a href="">フロアデカール</a></li>
+                          <li><a href="">吊り下げ看板</a></li>
+                          <li><a href="">ウォールデカール</a></li>
+                          <li><a href="">磁気車の標識</a></li>
+                          <li><a href="">屋外看板</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category3-3" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべて見る</a></li>
+                          <li><a href="">バナー</a></li>
+                          <li><a href="">バナースタンド</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category3-4" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべて見る</a></li>
+                          <li><a href="">ポスター</a></li>
+                          <li><a href="">粘着ポスター</a></li>
+                          <li><a href="">発泡ボードのポスター</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_signsbannersposters_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>サイン、バナー、ポスター</h3>
+                          <p>あなたのビジネスに光を当てましょう。</p>
+                          <a href="" class="clearfix-btn">今すぐ購入</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">カードと紹介状</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+
+                    <div class="tab">
+                      <button class="tablinks no-arrow"
+                        onmouseover="openCity(event, 'category4-1')">すべてのカードと招待状</button>
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category4-2')">カードと招待状</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category4-3')">お知らせ</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category4-4')">招待状</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category4-5')">行事</button>
+                    </div>
+
+                    <div id="category4-1" class="tabcontent">
+                      <div class="tabcontent-container">
+
+                      </div>
+                    </div>
+
+                    <div id="category4-2" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのカードと招待状</a></li>
+                          <li><a href="">独自のアップロード</a></li>
+                          <li><a href="">ホリデー</a></li>
+                          <li><a href="">ビジネスのご挨拶</a></li>
+                          <li><a href="">結婚式</a></li>
+                          <li><a href="">赤ちゃん</a></li>
+                          <li><a href="">招待状</a></li>
+                          <li><a href="">メモリアル</a></li>
+                          <li><a href="">ありがとうございました</a></li>
+                          <li><a href="">日常のあいさつ</a></li>
+                          <li><a href="">お知らせ</a></li>
+                          <li><a href="">誕生日</a></li>
+                          <li><a href="">卒業</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category4-3" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべてのお知らせ</a></li>
+                          <li><a href="">卒業発表</a></li>
+                          <li><a href="">結婚式のお知らせ</a></li>
+                          <li><a href="">誕生のお知らせ</a></li>
+                          <li><a href="">事業発表</a></li>
+                          <li><a href="">引越しのお知らせ</a></li>
+                          <li><a href="">採用発表</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category4-4" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての招待状</a></li>
+                          <li><a href="">ホリデーパーティーの招待状</a></li>
+                          <li><a href="">日付の招待状を保存</a></li>
+                          <li><a href="">結婚式招待状</a></li>
+                          <li><a href="">カクテル パーティーの招待状</a></li>
+                          <li><a href="">ビジネス招待状</a></li>
+                          <li><a href="">ベビーシャワーの招待状</a></li>
+                          <li><a href="">ブライダル シャワーの招待状</a></li>
+                          <li><a href="">誕生日の招待状</a></li>
+                          <li><a href="">一般的なカスタム招待状</a></li>
+                          <li><a href="">子供の誕生日パーティーの招待状</a></li>
+                          <li><a href="">卒業招待状</a></li>
+                          <li><a href="">退職パーティーの招待状</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category4-5" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての機会</a></li>
+                          <li><a href="">ハロウィン</a></li>
+                          <li><a href="">感謝祭</a></li>
+                          <li><a href="">ホリデー</a></li>
+                          <li><a href="">結婚式</a></li>
+                          <li><a href="">ベビーシャワー</a></li>
+                          <li><a href="">ブライダルシャワー</a></li>
+                          <li><a href="">メモリアル</a></li>
+                          <li><a href="">誕生日</a></li>
+                          <li><a href="">バレンタイン・デー</a></li>
+                          <li><a href="">イースター</a></li>
+                          <li><a href="">卒業</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_cardsinvites_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>カードと招待状</h3>
+                          <p>クライアント、同僚、愛する人に最適です。</p>
+                          <a href="" class="clearfix-btn">始めましょう</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">ドキュメントの印刷</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+                    <div class="tab">
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category5-1')">全文書印刷</button>
+                    </div>
+                    <div id="category5-1" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">全文書印刷</a></li>
+                          <li><a href="">シンプルプリント</a></li>
+                          <li><a href="">プロフェッショナルプリント</a></li>
+                          <li><a href="">小冊子</a></li>
+                          <li><a href="">設計図</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/746_janhp_nd_documentprinting.jpg" alt="">
+                        <figcaption>
+                          <h3>ドキュメントの印刷</h3>
+                          <p>高品質のドキュメントと設計図が利用できるようになりました。</p>
+                          <a href="" class="clearfix-btn">始めましょう</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list pick-up">
+              <a href="#">当日受け取り</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+                    <div class="tab">
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category6-1')">当日受け取り</button>
+                    </div>
+                    <div id="category6-1" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべて同日ピックアップ</a></li>
+                          <li><a href="">名刺はがき</a></li>
+                          <li><a href="">広告ラベル</a></li>
+                          <li><a href="">カードと招待状</a></li>
+                          <li><a href="">返品先住所ラベル</a></li>
+                          <li><a href="">ドキュメントの印刷</a></li>
+                          <li><a href="">ポスター</a></li>
+                          <li><a href="">チラシ</a></li>
+                          <li><a href="">パンフレット</a></li>
+                          <li><a href="">設計図</a></li>
+                          <li><a href="">屋内バナー</a></li>
+                          <li><a href="">プレインクスタンプ</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/1210_octhp_nav_advertisinglabels_320x505_1.jpg" alt="">
+                        <figcaption>
+                          <h3>午後2時までのご注文で当日集荷</h3>
+                          <p>ブランドに休日のリフレッシュを与えましょう。</p>
+                          <a href="" class="clearfix-btn">今すぐ購入</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_list">
+              <a href="#">印刷のソリューション</a>
+              <div class="menu_contents">
+                <div class="flyout-container menu__second-level">
+                  <div class="tab-container">
+
+                    <div class="tab">
+                      <button class="tablinks tablinks_first"
+                        onmouseover="openCity(event, 'category7-1')">すべての印刷ソリューション</button>
+                      <button class="tablinks" onmouseover="openCity(event, 'category7-2')">インスピレーションを得ます</button>
+                    </div>
+
+                    <div id="category7-1" class="tabcontent tabcontent-first">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">すべての印刷ソリューションを見る</a></li>
+                          <li><a href="">ホリデーソリューション</a></li>
+                          <li><a href="">パーソナルケア ソリューション</a></li>
+                          <li><a href="">オートモーティブ ソリューション</a></li>
+                          <li><a href="">キャンペーン ソリューション</a></li>
+                          <li><a href="">サイドハッスルソリューション</a></li>
+                          <li><a href="">法務サービス ソリューション</a></li>
+                          <li><a href="">季節の観光ソリューション</a></li>
+                          <li><a href="">非営利ソリューション</a></li>
+                          <li><a href="">建設ソリューション</a></li>
+                          <li><a href="">ヘルス＆ウェルネス ソリューション</a></li>
+                          <li><a href="">ウェディングプランニングソリューション</a></li>
+                          <li><a href="">会計ソリューション</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="category7-2" class="tabcontent">
+                      <div class="tabcontent-container">
+                        <ul>
+                          <li class="frist"><a href="">#lovemystaplesprints</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <figure>
+                        <img src="./images/746_janhp_nd_posters.jpg" alt="">
+                        <figcaption>
+                          <h3>産業用印刷ソリューション</h3>
+                          <p>ブランドを構築するためのオンデマンド デザイン。</p>
+                          <a href="" class="clearfix-btn">もっと詳しく知る</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="menu-underlay"></div>
+      <div class="header__sp-category">
+        <nav>
+          <ul>
+            <li class="has-child _main-ttl">
+              <a href="#">すべての製品</a>
+              <div class="mobile-close">
+                <span></span>
+                <span></span>
+              </div>
+              <ul>
+                <li class="has-child _sub-ttl">
+                  <a href="#">名刺</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての名刺</a></li>
+                    <li><a href="#">従来の名刺</a></li>
+                    <li><a href="#">隆起プリント名刺</a></li>
+                    <li><a href="#">エグゼクティブ名刺</a></li>
+                    <li><a href="#">超厚手名刺</a></li>
+                    <li><a href="#">ポイントカード</a></li>
+                    <li><a href="#">予約カード</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">サイン、バナー、ポスター</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべてのサイン、バナー、ポスター</a></li>
+                    <li><a href="#">ヤードサイン</a></li>
+                    <li><a href="#">Aフレーム</a></li>
+                    <li><a href="#">ウインドウデカール</a></li>
+                    <li><a href="#">フェザーフラッグ</a></li>
+                    <li><a href="#">スナップフレームサイン</a></li>
+                    <li><a href="#">フロアデカール</a></li>
+                    <li><a href="#">吊り下げ看板</a></li>
+                    <li><a href="#">ウォールデカール</a></li>
+                    <li><a href="#">磁気車の標識</a></li>
+                    <li><a href="#">屋外看板</a></li>
+                    <li><a href="#">バナー</a></li>
+                    <li><a href="#">バナースタンド</a></li>
+                    <li><a href="#">ポスター</a></li>
+                    <li><a href="#">発泡ボードのポスター</a></li>
+                    <li><a href="#">粘着ポスター</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl"><a href="#">カードと招待状</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべてのカードと招待状</a></li>
+                    <li><a href="#">独自のアップロード</a></li>
+                    <li><a href="#">ホリデー</a></li>
+                    <li><a href="#">ビジネスのご挨拶</a></li>
+                    <li><a href="#">結婚式</a></li>
+                    <li><a href="#">赤ちゃん</a></li>
+                    <li><a href="#">招待状</a></li>
+                    <li><a href="#">メモリアル</a></li>
+                    <li><a href="#">ありがとうございました</a></li>
+                    <li><a href="#">お知らせ</a></li>
+                    <li><a href="#">誕生日</a></li>
+                    <li><a href="#">卒業</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">ドキュメントの印刷</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">全文書印刷</a></li>
+                    <li><a href="#">シンプルプリント</a></li>
+                    <li><a href="#">プロフェッショナルプリント</a></li>
+                    <li><a href="#">小冊子</a></li>
+                    <li><a href="#">設計図</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">文房具</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての文房具</a></li>
+                    <li><a href="#">切手</a></li>
+                    <li><a href="#">封筒</a></li>
+                    <li><a href="#">返品先住所ラベル</a></li>
+                    <li><a href="#">宛名ラベル</a></li>
+                    <li><a href="#">レターヘッド</a></li>
+                    <li><a href="#">エグゼクティブレターヘッド</a></li>
+                    <li><a href="#">ノートカード</a></li>
+                    <li><a href="#">メモ帳</a></li>
+                    <li><a href="#">ネームタグ</a></li>
+                    <li><a href="#">刻印デスクネームプレート</a></li>
+                    <li><a href="#">刻まれたドアと壁のサイン</a></li>
+                    <li><a href="#">ノートブック</a></li>
+                    <li><a href="#">エンボス</a></li>
+                    <li><a href="#">ポストイット</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">カスタムスタンプ</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての切手と公証人</a></li>
+                    <li><a href="#">テキスタイルスタンプ</a></li>
+                    <li><a href="#">公証人スタンプ</a></li>
+                    <li><a href="#">プレインクスタンプ</a></li>
+                    <li><a href="#">日付スタンプ</a></li>
+                    <li><a href="#">インク付き住所スタンプ</a></li>
+                    <li><a href="#">インク付き保証スタンフ</a></li>
+                    <li><a href="#">インク入りメッセージスタンプ</a></li>
+                    <li><a href="#">インク付き署名スタンプ</a></li>
+                    <li><a href="#">ゴム印</a></li>
+                    <li><a href="#">セルフインクスタンプ</a></li>
+                    <li><a href="#">スタンプリフィル＆アクセサリー</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">フォトギフト</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべてのフォトギフト</a></li>
+                    <li><a href="#">ギフトラップ</a></li>
+                    <li><a href="#">カスタムウォールアート</a></li>
+                    <li><a href="#">フォトマグ</a></li>
+                    <li><a href="#">個人カレンダー</a></li>
+                    <li><a href="#">装飾品</a></li>
+                    <li><a href="#">フォトブランケット</a></li>
+                    <li><a href="#">フォトパズル</a></li>
+                    <li><a href="#">ボーダープリント</a></li>
+                    <li><a href="#">フォトコースター</a></li>
+                    <li><a href="#">フォトマウスバッド</a></li>
+                    <li><a href="#">写真ポスター</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">販売およびマーケティング資料</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての販売およびマーケティング資料</a></li>
+                    <li><a href="#">ラベル＆ステッカー</a></li>
+                    <li><a href="#">チラシ</a></li>
+                    <li><a href="#">はがき</a></li>
+                    <li><a href="#">パンフレット</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">予約カード</a></li>
+                    <li><a href="#">ポイントカード</a></li>
+                    <li><a href="#">ラックカード</a></li>
+                    <li><a href="#">磁石</a></li>
+                    <li><a href="#">ネームタグ</a></li>
+                    <li><a href="#">商品券</a></li>
+                    <li><a href="#">フォルダ</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">販促品</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての販促品</a></li>
+                    <li><a href="#">カスタムアパレル</a></li>
+                    <li><a href="#">ドリンクウェア</a></li>
+                    <li><a href="#">筆記具</a></li>
+                    <li><a href="#">テクノロジー</a></li>
+                    <li><a href="#">バッグ＆トート</a></li>
+                    <li><a href="#">展示会</a></li>
+                    <li><a href="#">アウトドアスポーツ</a></li>
+                    <li><a href="#">賞とトロフィー</a></li>
+                    <li><a href="#">オフィス用品</a></li>
+                    <li><a href="#">ホーム＆パーソナルケア</a></li>
+                    <li><a href="#">カレンダー＆プランナー</a></li>
+                    <li><a href="#">フェザーフラッグ</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">印刷のソリューション</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">すべての印刷ソリューション</a></li>
+                    <li><a href="#">ホリデーソリューション</a></li>
+                    <li><a href="#">パーソナルケアソリューション</a></li>
+                    <li><a href="#">オートモーティブソリューション</a></li>
+                    <li><a href="#">キャンペーンソリューション</a></li>
+                    <li><a href="#">サイドハッスルソリューション</a></li>
+                    <li><a href="#">法務サービスソリューション</a></li>
+                    <li><a href="#">季節の観光ソリューション</a></li>
+                    <li><a href="#">非営利ソリューション</a></li>
+                    <li><a href="#">建設ソリューション</a></li>
+                    <li><a href="#">ヘルス＆ウェルネスソリューション</a></li>
+                    <li><a href="#">ウェディングプランニングソリューション</a></li>
+                    <li><a href="#">会計ソリューション</a></li>
+                    <li><a href="#">不動産ソリューション</a></li>
+                    <li><a href="#">スモールビジネスソリューション</a></li>
+                    <li><a href="#">トラベルプリントソリューション</a></li>
+                    <li><a href="#">ヘルスケアソリューション</a></li>
+                    <li><a href="#">リテールプリントソリューション</a></li>
+                    <li><a href="#">レストランソリューション</a></li>
+                    <li><a href="#">コミュニティイベントソリューション</a></li>
+                    <li><a href="#">教育ソリューション</a></li>
+                    <li><a href="#">造園ソリューション</a></li>
+                    <li><a href="#">Covid-19ソリューション</a></li>
+                    <li><a href="#">印刷およびマーケティング機能</a></li>
+                  </ul>
+                </li>
+                <li class="has-child _sub-ttl">
+                  <a href="#">その他のビジネスソリューション</a>
+                  <ul class="header__sp-subcategory">
+                    <li><a href="#">その他のビジネスソリューション</a></li>
+                    <li><a href="#">ビジネスフォーム</a></li>
+                    <li><a href="#">小切手</a></li>
+                    <li><a href="#">ダイレクトメール</a></li>
+                    <li><a href="#">オンラインマーケティングサービス</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="sc-p36blq-2 egVQSc">
+      <h2 class="MyAccount__heading_txt">口座[アカウント]状況</h2>
+      <div>
+        <div class="sc-p36blq-0 bTQkfM">
+          <div class="sc-p36blq-1 uVxjb">
+            <div aria-disabled="true" class="sc-hhlxhc-0 hPldmo">
+              <div class="sc-p36blq-0 gaOa-dg">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__heading_title_acct MyAccount__profile_heading_padding"><span
+                      class="MyAccount__padding_16"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"
+                        size="32" height="32px" width="32px" color="black" class="sc-14dq9fm-0 huGEfe">
+                        <g fill-rule="evenodd">
+                          <path
+                            d="M22.9,21.6 C21.7,18.4 19.1,16 15.9,14.8 C19.4,12.6 20.5,8 18.3,4.5 C16.1,1 11.6,-0.1 8,2.1 C4.4,4.3 3.4,8.9 5.6,12.5 C6.2,13.5 7,14.3 8,14.9 C4.8,16 2.3,18.5 1,21.7 C0.8,22.2 1,22.8 1.6,23 C1.6,23 1.6,23 1.6,23 L1.6,23 C1.8,23 1.9,23 2,23 C2.4,23 2.8,22.7 2.9,22.4 C4.9,17.4 10.5,14.9 15.5,16.9 C18,17.9 20,19.9 21,22.4 C21.2,22.9 21.8,23.2 22.3,23 C22.9,22.7 23.1,22.2 22.9,21.6 Z M6.5,8.5 C6.5,5.5 9,3 12,3 C15,3 17.5,5.5 17.5,8.5 C17.5,11.5 15,14 12,14 C9,14 6.5,11.6 6.5,8.5 Z"
+                            fill="inherit"></path>
+                        </g>
+                      </svg></span>
+                    プロフィール
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb"><span class="MyAccount__viewAll2">
+                    <div color="link_blue" class="sc-izol8d-0 kpyTAW"><a aria-label="" role="link" tabindex="0"
+                        target="_self" href="">
+                        すべて見る
+                      </a></div>
+                  </span></div>
+              </div>
+              <div class="sc-p36blq-0 kSHZXg">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__profileFieldnew">
+
+                    名前：
+
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__ellipsisProfileTile MyAccount__fieldValue">
+                    谷内
+                    &nbsp;
+                    健吾
+                  </div>
+                </div>
+              </div>
+              <div class="sc-p36blq-0 kSHZXg">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__profileFieldnew">
+                    ユーザー名:
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__ellipsisProfileTile MyAccount__fieldValue">
+                    torahykw@gmail.com
+                  </div>
+                </div>
+              </div>
+              <div class="sc-p36blq-0 kSHZXg">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__profileFieldnew">
+                    Eメール：
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__ellipsisProfileTile MyAccount__fieldValue">
+                    torahykw@gmail.com
+                  </div>
+                </div>
+              </div>
+              <div class="sc-p36blq-0 kSHZXg">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__profileFieldnew">
+                    電話：
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__fieldValue"></div>
+                </div>
+              </div>
+              <div class="sc-p36blq-0 kSHZXg">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__profileFieldnew">
+                    住所：
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__fixedHeight"></div>
+                </div>
+              </div>
+              <div class="sc-p36blq-0 kSHZXg">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__profileFieldnew">
+                    ご希望の店舗:
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb"></div>
+              </div>
+            </div>
+          </div>
+          <div class="sc-p36blq-1 uVxjb">
+            <form>
+              <div aria-disabled="true" class="sc-hhlxhc-0 hPldmo">
+                <div class="sc-p36blq-0 bybKIy">
+                  <div span="5" class="sc-p36blq-1 uVxjb">
+                    <div class="RegisteredOrders__order_title_new"><span class="RegisteredOrders__padding_16"><svg
+                          viewBox="0 0 64 64" focusable="false" aria-hidden="true" size="32" height="32px" width="32px"
+                          color="black" class="sc-14dq9fm-0 huGEfe">
+                          <g fill-rule="evenodd">
+                            <path
+                              d="M54.8403582,62.8632836 L8.63426866,62.8632836 C3.87343284,62.8632836 1.42108547e-14,58.9898507 1.42108547e-14,54.2290149 L1.42108547e-14,17.2723582 L5.85647761,17.2723582 L5.85552239,57.0058507 L57.6162388,57.0058507 L57.6181493,17.2723582 L63.4755821,17.2723582 L63.4755821,54.2290149 C63.4755821,58.9898507 59.601194,62.8632836 54.8403582,62.8632836"
+                              fill="inherit"></path>
+                            <path
+                              d="M46.2695164,17.7690746 L40.4120836,17.7690746 L40.4149493,5.85743284 L23.0604418,5.85743284 L23.0623522,17.7690746 L17.2049194,17.7690746 L17.2049194,8.63426866 C17.2049194,3.87343284 21.0783522,-1.77635684e-15 25.8401433,-1.77635684e-15 L37.6342925,-1.77635684e-15 C42.3951284,-1.77635684e-15 46.2695164,3.87343284 46.2695164,8.63426866 L46.2695164,17.7690746 Z"
+                              fill="inherit"></path>
+                          </g>
+                        </svg></span>
+
+                      注文
+
+                    </div>
+                  </div>
+                  <div span="7" class="sc-p36blq-1 uVxjb">
+                    <div class="commonStyles__search_div"><span class="commonStyles__search_container"><input
+                          name="enSearchValue" type="text" placeholder="注文番号を検索する" aria-label="検索"
+                          class="commonStyles__search_text_box_new " value=""><span
+                          class="commonStyles__search_icon"><svg viewBox="0 0 24 24" focusable="false"
+                            aria-hidden="true" size="14" height="14px" width="14px" color="dark_gray"
+                            class="sc-14dq9fm-0 deQvGl">
+                            <g fill-rule="evenodd">
+                              <path
+                                d="M16.5833447,15.9948718 L22.9420973,22.3549718 C23.3184203,22.7312948 23.3184203,23.3414348 22.9420973,23.7177578 C22.5947223,24.0651328 22.0481185,24.091854 21.6700929,23.7979213 L21.5793114,23.7177578 L15.0577048,17.1970334 C13.6200639,18.1048901 11.9167879,18.6302802 10.0908006,18.6302802 C4.94619074,18.6302802 0.77566045,14.4597499 0.77566045,9.31514011 C0.77566045,4.17053029 4.94619074,7.63833441e-14 10.0908006,7.63833441e-14 C15.2354104,7.63833441e-14 19.4059407,4.17053029 19.4059407,9.31514011 C19.4059407,11.9350528 18.3243573,14.3023481 16.5833447,15.9948718 Z M10.0908006,1.92727037 C6.01059277,1.92727037 2.70293082,5.23493232 2.70293082,9.31514011 C2.70293082,13.3953479 6.01059277,16.7030099 10.0908006,16.7030099 C14.1710084,16.7030099 17.4786703,13.3953479 17.4786703,9.31514011 C17.4786703,5.23493232 14.1710084,1.92727037 10.0908006,1.92727037 Z"
+                                fill="inherit"></path>
+                            </g>
+                          </svg></span></span></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="sc-p36blq-0 boQABA">
+                    <div class="sc-p36blq-1 uVxjb"> </div>
+                    <div class="sc-p36blq-1 uVxjb">
+                      <div class="RegisteredOrders__emptyContainer"><a href="javascript:void(0)">
+                          <div size="55" color="light_blue" class="sc-1uy696s-0 PSQys"><svg viewBox="0 0 40 40"
+                              focusable="false" aria-hidden="true" size="55" height="55px" width="55px"
+                              class="sc-14dq9fm-0 deQvGl">
+                              <g fill-rule="evenodd">
+                                <path
+                                  d="M39.3,13.5c-0.7-1-1.8-1.6-3.1-1.6l-2.1,0l-6.3-10c-0.4-0.6-1.2-0.8-1.8-0.4c-0.6,0.4-0.8,1.2-0.4,1.8l5.4,8.6  l-21.8,0l5.4-8.6c0.4-0.6,0.2-1.4-0.4-1.8c-0.6-0.4-1.4-0.2-1.8,0.4L6,11.9l-2.1,0c-1.2,0-2.3,0.6-3.1,1.6c-0.7,1-1,2.2-0.7,3.3  L4,35.5c0.4,1.8,1.9,3,3.8,3.1h24.6c0,0,0,0,0,0c1.8,0,3.4-1.3,3.7-3.1l3.8-18.6C40.2,15.7,40,14.5,39.3,13.5z M37.3,16.2  C37.3,16.3,37.3,16.3,37.3,16.2l-3.8,18.7c-0.1,0.6-0.6,1-1.2,1H7.8c-0.6,0-1.1-0.4-1.2-1L2.8,16.3c0,0,0-0.1,0-0.1  c-0.1-0.4,0-0.8,0.2-1.1c0.2-0.3,0.6-0.5,1-0.5l2.8,0c0,0,0,0,0,0c0,0,0,0,0,0l26.6,0c0,0,0,0,0,0c0,0,0,0,0,0l2.7,0  c0.4,0,0.8,0.2,1,0.5C37.4,15.4,37.5,15.8,37.3,16.2z M14.7,24.3c-1.1,0-2-0.9-2-2s0.9-2,2-2c1.1,0,2,0.9,2,2S15.8,24.3,14.7,24.3z   M25.4,24.3c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S26.5,24.3,25.4,24.3z M23.9,30.1h-7.7c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3  h7.7c0.7,0,1.3,0.6,1.3,1.3S24.6,30.1,23.9,30.1z"
+                                  fill="inherit"></path>
+                              </g>
+                            </svg></div>
+                        </a>
+                        <div class="RegisteredOrders__emptyText"><span>
+
+                            表示する最近の注文はありません
+
+                          </span></div>
+                      </div>
+                    </div>
+                    <div class="sc-p36blq-1 uVxjb"></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="sc-p36blq-0 dnOxwd">
+          <div class="sc-p36blq-1 Pmdeg">
+            <div aria-disabled="true" class="sc-hhlxhc-0 hgapSl">
+              <div class="sc-6ciy8u-1 kuqdgP"></div>
+              <div class="sc-p36blq-0 dqYZZt">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__heading_title_acct MyAccount__pad_bot_16"><span
+                      class="MyAccount__padding_16"><svg viewBox="0 0 40 40" focusable="false" aria-hidden="true"
+                        size="32" height="32px" width="32px" color="black" class="sc-14dq9fm-0 huGEfe">
+                        <g fill-rule="evenodd">
+                          <path
+                            d="M3.75,35A3.754,3.754,0,0,1,0,31.25V8.75A3.754,3.754,0,0,1,3.75,5h32.5A3.754,3.754,0,0,1,40,8.75v22.5A3.754,3.754,0,0,1,36.25,35ZM2.5,31.25A1.25,1.25,0,0,0,3.75,32.5h32.5a1.25,1.25,0,0,0,1.25-1.25V15H2.5Zm35-18.75V8.75A1.25,1.25,0,0,0,36.25,7.5H3.75A1.25,1.25,0,0,0,2.5,8.75V12.5ZM8.75,22.5a1.25,1.25,0,0,1,0-2.5H22.5a1.25,1.25,0,0,1,0,2.5Zm0,5a1.25,1.25,0,0,1,0-2.5H17.5a1.25,1.25,0,0,1,0,2.5Z"
+                            fill="inherit"></path>
+                        </g>
+                      </svg></span>
+
+                    保存されたカード
+
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb"><span class="MyAccount__myaccountbtn">
+                    <button id="addCardButton" type="button" width="auto" class="sc-1gktvoi-0 bqwyjD"><span
+                        class="sc-1gktvoi-1 iaLcAe">カードを追加</span>
+                    </button></span></div>
+              </div>
+              <div class="sc-p36blq-0 dQkGog">
+                <div span="12" class="sc-p36blq-1 byNfEv">
+                  <div class="MyAccount__empty_tile_wrapper">
+                    <div class="MyAccount__icon_title_wrapper">
+                      <div size="58" color="light_blue" class="sc-1uy696s-0 cBLFqI"><svg viewBox="0 0 40 40"
+                          focusable="false" aria-hidden="true" size="58" height="58px" width="58px"
+                          class="sc-14dq9fm-0 deQvGl">
+                          <g fill-rule="evenodd">
+                            <path
+                              d="M3.75,35A3.754,3.754,0,0,1,0,31.25V8.75A3.754,3.754,0,0,1,3.75,5h32.5A3.754,3.754,0,0,1,40,8.75v22.5A3.754,3.754,0,0,1,36.25,35ZM2.5,31.25A1.25,1.25,0,0,0,3.75,32.5h32.5a1.25,1.25,0,0,0,1.25-1.25V15H2.5Zm35-18.75V8.75A1.25,1.25,0,0,0,36.25,7.5H3.75A1.25,1.25,0,0,0,2.5,8.75V12.5ZM8.75,22.5a1.25,1.25,0,0,1,0-2.5H22.5a1.25,1.25,0,0,1,0,2.5Zm0,5a1.25,1.25,0,0,1,0-2.5H17.5a1.25,1.25,0,0,1,0,2.5Z"
+                              fill="inherit"></path>
+                          </g>
+                        </svg></div>
+                    </div>
+                    <div class="MyAccount__titlenoorder">
+                      <div class="MyAccount__payment_title">
+                        <div class="MyAccount__emptytextorder">
+
+                          次の販売店のクレジット カードを入力してください。
+
+                        </div>
+                        <div class="MyAccount__credit_card_options_logos"><span class="MyAccount__brand_logo"><svg
+                              viewBox="0 0 54 34" focusable="false" aria-hidden="true" size="35" height="35px"
+                              width="35px" color="black" class="sc-14dq9fm-0 huGEfe">
+                              <g fill-rule="evenodd">
+                                <path
+                                  d="M54,32 C54,33.1045695 53.1045695,34 52,34 L2,34 C0.8954305,34 0,33.1045695 0,32 L0,2 C0,0.8954305 0.8954305,0 2,0 L52,0 C53.1045695,0 54,0.8954305 54,2 L54,32"
+                                  fill="#2a2a6c"></path>
+                                <path
+                                  d="M21.55,9.93999938 L15.61,24.1 L11.74,24.1 L8.82,12.8 C8.77531406,12.2715871 8.46689849,11.8014414 8,11.55 C6.85139199,11.0010843 5.63864976,10.5979567 4.39,10.35 L4.48,9.93999938 L10.71,9.93999938 C11.550728,9.93928699 12.2672537,10.5498178 12.4,11.38 L13.94,19.58 L17.7,9.93999938 L21.55,9.93999938 M36.72,19.47 C36.72,15.74 31.55,15.53 31.59,13.86 C31.59,13.35 32.08,12.86 33.14,12.68 C34.3780638,12.5622729 35.6249952,12.7798814 36.75,13.31 L37.39,10.31 C36.3061144,9.90129787 35.1583529,9.68799705 34,9.68 C30.38,9.68 27.83,11.61 27.81,14.36 C27.81,16.36 29.63,17.53 31.01,18.21 C32.39,18.89 32.92,19.35 32.91,19.97 C32.91,20.97 31.77,21.34 30.72,21.36 C29.4099907,21.3895942 28.1146326,21.0795351 26.96,20.46 L26.3,23.57 C27.5981057,24.0713366 28.9784598,24.3257016 30.37,24.3200938 C34.22,24.3200938 36.73,22.41 36.75,19.47 M46.3,24.1 L49.69,24.1 L46.71,9.94 L43.58,9.94 C42.8838681,9.92944483 42.2542249,10.3518637 42,11 L36.53,24.1 L40.37,24.1 L41.13,22 L45.83,22 L46.3,24.1 Z M42.22,19.1 L44.15,13.78 L45.26,19.1 L42.22,19.1 Z M26.78,9.94 L23.78,24.1 L20.09,24.1 L23.09,9.94 L26.78,9.94 Z"
+                                  fill="#ffffff"></path>
+                              </g>
+                            </svg></span><span class="MyAccount__brand_logo"><svg viewBox="0 0 25 16" focusable="false"
+                              aria-hidden="true" size="35" height="35px" width="35px" color="black"
+                              class="sc-14dq9fm-0 huGEfe">
+                              <g fill-rule="evenodd">
+                                <path
+                                  d="M1.85185185,0 L23.1481481,0 C24.1708977,0 25,0.842758118 25,1.88235294 L25,14.1176471 C25,15.1572419 24.1708977,16 23.1481481,16 L1.85185185,16 C0.829102315,16 0,15.1572419 0,14.1176471 L0,1.88235294 C0,0.842758118 0.829102315,0 1.85185185,0 Z"
+                                  fill="#f3f3f3"></path>
+                                <path
+                                  d="M11.1100591,7.98974051 C11.1059279,6.46503806 11.8011486,5.02093121 13,4.06397029 C10.978426,2.45501608 8.03803027,2.69674247 6.31214214,4.61377104 C4.56261929,6.54218178 4.56261929,9.46623612 6.31214214,11.3946469 C8.04213059,13.3072033 10.9821775,13.5425406 13,11.9299792 C11.7971369,10.9698458 11.1014804,9.51950824 11.1100591,7.98974051 L11.1100591,7.98974051 Z"
+                                  fill="#eb001b"></path>
+                                <path
+                                  d="M13,4 C11.7348271,4.97784263 11,6.44749688 11,8 C11,9.55250312 11.7348271,11.0221574 13,12 C14.2651729,11.0221574 15,9.55250312 15,8 C15,6.44749688 14.2651729,4.97784263 13,4 L13,4 Z"
+                                  fill="#ff5f00"></path>
+                                <path
+                                  d="M21,8 C21.0082303,9.90254376 19.9293279,11.6456669 18.2148201,12.4997857 C16.5131658,13.3340993 14.4776536,13.111721 13,11.9300703 C14.1948403,10.9693228 14.8888175,9.52536162 14.8888175,8 C14.8888175,6.47463838 14.1948403,5.03067725 13,4.06992967 C14.4776536,2.88827896 16.5131658,2.66590071 18.2148201,3.50021432 C19.9293279,4.35433307 21.0082303,6.09745624 21,8 L21,8 Z"
+                                  fill="#f79e1b"></path>
+                              </g>
+                            </svg></span><span class="MyAccount__brand_logo"><svg viewBox="0 0 54 34" focusable="false"
+                              aria-hidden="true" size="35" height="35px" width="35px" color="black"
+                              class="sc-14dq9fm-0 huGEfe">
+                              <g fill-rule="evenodd">
+                                <path d="M54,34H0V0H54Z" fill="#ffffff"></path>
+                                <path
+                                  d="M4.94,20.46V13.2H6.46a5.64,5.64,0,0,1,1.73.22,3.22,3.22,0,0,1,1.23.72,3.47,3.47,0,0,1,1.13,2.69,3.42,3.42,0,0,1-1.17,2.7,3.33,3.33,0,0,1-1.23.72,5.41,5.41,0,0,1-1.71.21Zm1.09-1h.5a3.84,3.84,0,0,0,1.22-.16,2.39,2.39,0,0,0,.88-.52,2.47,2.47,0,0,0,.81-1.92,2.51,2.51,0,0,0-.8-1.94,3,3,0,0,0-2.11-.66H6Z"
+                                  fill=""></path>
+                                <path d="M12.48,13.2v7.26h-1.1V13.2Z" fill=""></path>
+                                <path
+                                  d="M17.78,14.28l-.89.53a1.38,1.38,0,0,0-.47-.56,1.28,1.28,0,0,0-1.36.1.81.81,0,0,0-.3.64c0,.36.26.64.79.86l.72.29a3,3,0,0,1,1.29.88A2,2,0,0,1,18,18.28a2.21,2.21,0,0,1-.67,1.65,2.28,2.28,0,0,1-1.67.66A2.24,2.24,0,0,1,14.08,20a2.55,2.55,0,0,1-.76-1.58l1.11-.24a1.91,1.91,0,0,0,.26.88,1.13,1.13,0,0,0,1,.47,1.15,1.15,0,0,0,.85-.34,1.21,1.21,0,0,0,.33-.87,1.23,1.23,0,0,0-.05-.39,1,1,0,0,0-.19-.32,1.49,1.49,0,0,0-.32-.28,2.93,2.93,0,0,0-.47-.24l-.7-.29A2,2,0,0,1,13.64,15a1.73,1.73,0,0,1,.63-1.36,2.24,2.24,0,0,1,1.55-.56A2.17,2.17,0,0,1,17.78,14.28Z"
+                                  fill=""></path>
+                                <path
+                                  d="M24.11,13.59v1.3a3,3,0,0,0-2-.79,2.48,2.48,0,0,0-1.88.8,2.71,2.71,0,0,0-.77,2,2.66,2.66,0,0,0,.77,1.93,2.56,2.56,0,0,0,1.89.78,2.42,2.42,0,0,0,1-.18,3.19,3.19,0,0,0,.47-.26,4.78,4.78,0,0,0,.51-.38v1.32a4,4,0,0,1-2,.53,3.72,3.72,0,0,1-3.75-3.73,3.74,3.74,0,0,1,.91-2.47,3.69,3.69,0,0,1,2.92-1.33A3.76,3.76,0,0,1,24.11,13.59Z"
+                                  fill=""></path>
+                                <path d="M32.11,16.81A3.81,3.81,0,1,1,28.3,13,3.82,3.82,0,0,1,32.11,16.81Z"
+                                  fill="#e55b1b">
+                                </path>
+                                <path d="M33,13.2l2,5,2-5h1.2L35,21l-3.18-7.8Z"></path>
+                                <path d="M42.61,14.23H39.7V16h2.82v1H39.7v2.43h2.91v1h-4V13.2h4Z"></path>
+                                <path
+                                  d="M46,17.37l2.25,3.09H46.87l-2.07-3h-.2v3H43.5V13.2h1.29a3.19,3.19,0,0,1,2.07.54,2,2,0,0,1,.71,1.59,2.09,2.09,0,0,1-.44,1.33A2,2,0,0,1,46,17.37Zm-1.36-.84H45c1,0,1.55-.39,1.55-1.18S46,14.23,45,14.23H44.6Z">
+                                </path>
+                                <path
+                                  d="M49.06,13.91a.63.63,0,0,1-.19.47.64.64,0,0,1-.93,0,.63.63,0,0,1-.19-.47.67.67,0,0,1,.06-.28.72.72,0,0,1,.17-.22.66.66,0,0,1,.42-.15.76.76,0,0,1,.27.05.62.62,0,0,1,.28.25A.58.58,0,0,1,49.06,13.91Zm-.66-.56a.54.54,0,0,0-.39.17.57.57,0,0,0-.16.39.58.58,0,0,0,.16.4.54.54,0,0,0,.78,0,.56.56,0,0,0,.16-.41.57.57,0,0,0-.06-.25.47.47,0,0,0-.16-.2A.57.57,0,0,0,48.4,13.35Zm.07.63.25.32h-.18l-.23-.3v.3h-.14v-.76h.15a.36.36,0,0,1,.23.05.2.2,0,0,1,.08.17.23.23,0,0,1,0,.14.28.28,0,0,1-.11.08Zm-.16-.11h0c.1,0,.15,0,.15-.1s-.05-.1-.15-.1h0Z">
+                                </path>
+                              </g>
+                            </svg></span><span class="MyAccount__brand_logo"><svg viewBox="0 0 40 40" focusable="false"
+                              aria-hidden="true" size="35" height="35px" width="35px" color="black"
+                              class="sc-14dq9fm-0 huGEfe">
+                              <g fill-rule="evenodd">
+                                <path
+                                  d="M29.9,25.8L9.8,31.2c-2.3,0.6-4.6-0.7-5.2-3l-3.5-13c-0.6-2.3,0.7-4.6,3-5.2l20.1-5.4  c2.3-0.6,4.6,0.7,5.2,3l3.5,13C33.5,22.8,32.1,25.2,29.9,25.8"
+                                  fill="#cc0000"></path>
+                                <path
+                                  d="M35.2247843,35.4901961 L14.4486623,35.4901961 C12.1000784,35.4901961 10.1955904,33.5857081 10.1955904,31.2383442 L10.1955904,17.7824837 C10.1955904,15.4338998 12.1000784,13.5294118 14.4486623,13.5294118 L35.2247843,13.5294118 C37.5733682,13.5294118 39.4766362,15.4338998 39.4766362,17.7824837 L39.4766362,31.2383442 C39.4766362,33.5857081 37.5733682,35.4901961 35.2247843,35.4901961"
+                                  fill="#e91f1f"></path>
+                                <path
+                                  d="M30.3208191,20.6256732 C31.3639564,20.6256732 32.1569848,21.4675033 32.1569848,22.5057603 L32.1569848,22.5057603 L32.1569848,28.3534292 C32.1569848,28.37661 32.1386841,28.3936907 32.1167233,28.3936907 L32.1167233,28.3936907 L30.6965926,28.3936907 C30.6746318,28.3936907 30.6563311,28.37661 30.6563311,28.3534292 L30.6563311,28.3534292 L30.6563311,22.4179172 L19.0146754,22.4179172 L19.0146754,28.3534292 C19.0146754,28.37661 18.9975947,28.3936907 18.974414,28.3936907 L18.974414,28.3936907 L17.5567233,28.3936907 C17.5347625,28.3936907 17.5164619,28.37661 17.5164619,28.3534292 L17.5164619,28.3534292 L17.5164619,22.5057603 C17.5164619,21.4675033 18.3107103,20.6256732 19.3501874,20.6256732 L19.3501874,20.6256732 L30.3208191,20.6256732 Z"
+                                  fill="#ffffff"></path>
+                              </g>
+                            </svg></span><span class="MyAccount__brand_logo"><svg viewBox="0 0 54 34" focusable="false"
+                              aria-hidden="true" size="35" height="35px" width="35px" color="black"
+                              class="sc-14dq9fm-0 huGEfe">
+                              <g fill-rule="evenodd">
+                                <path
+                                  d="M49,30.2l-2.3-2.6l-2.4,2.6h-4.8H29.2V18.1h-4.8l5.9-13.5h5.8l2.1,4.7V4.6h7.2l1.3,3.5l1.3-3.5h5.5V2.5  c0-1.3-1-2.2-2.2-2.2H2.2C1,0.3,0,1.3,0,2.5v29.1c0,1.3,1,2.2,2.2,2.2h48.9c1.3,0,2.2-1,2.2-2.2v-1.4H49z M49.6,28.7h3.8l-5-5.3  l5-5.2h-3.7l-3.2,3.4l-3.1-3.4h-3.8l5,5.3l-5,5.2h3.7l3.1-3.4L49.6,28.7z M33.7,26.3v-1.6h5.9v-2.4h-5.9v-1.6h6v-2.4h-8.9v10.5h8.9  v-2.4H33.7z M50.6,16.7h2.7V6.2L49,6.3l-2.3,6.5l-2.4-6.5h-4.5v10.5h2.9V9.4l2.7,7.3h2.5l2.8-7.3V16.7z M35.1,6.3h-3.7l-4.7,10.5  h3.2l0.9-2.1h4.9l0.9,2.1h3.2L35.1,6.3z M31.8,12.3l1.4-3.4l1.4,3.4H31.8z M51,23l3,3v-6L51,23z"
+                                  fill="#0071CE"></path>
+                              </g>
+                            </svg></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sc-p36blq-1 uVxjb">
+            <div aria-disabled="true" tabindex="0" class="sc-hhlxhc-0 faVMGF">
+              <div class="sc-p36blq-0 jFpooC">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__heading_title_acct"><span class="MyAccount__padding_16"><svg
+                        viewBox="0 0 24 24" focusable="false" aria-hidden="true" size="32" height="32px" width="32px"
+                        color="black" class="sc-14dq9fm-0 huGEfe">
+                        <g fill-rule="evenodd">
+                          <path
+                            d="M11.251662,2.49982063 C11.8806542,2.49855803 12.4572043,2.85019555 12.744,3.41 L12.744,3.41 L12.744,3.416 L15.244,8.375 L19.991,8.846 C20.6341224,8.90557743 21.1844884,9.33235067 21.4023175,9.94038554 C21.6201467,10.5484204 21.4659862,11.227591 21.007,11.682 L21.007,11.682 L17.065,15.589 L18.526,20.897 C18.6611754,21.3979807 18.5552039,21.93334 18.2393672,22.3450453 C17.9235304,22.7567505 17.4338964,22.9977858 16.915,22.9970038 C16.6547905,22.9975565 16.3981384,22.9365631 16.166,22.819 L16.166,22.819 L11.248,20.385 L6.332,22.82 C5.74549259,23.1116726 5.04259068,23.033297 4.53473407,22.6195996 C4.02687746,22.2059023 3.8079682,21.5333753 3.975,20.9 L3.975,20.9 L5.445,15.585 L1.499,11.679 C1.03908607,11.222193 0.886519528,10.539778 1.1081143,9.93060714 C1.32970907,9.32143624 1.8850754,8.89654213 2.531,8.842 L2.531,8.842 L7.263,8.372 L9.763,3.416 C10.0475399,2.85504559 10.6226698,2.50109004 11.251662,2.49982063 Z M11.248,4.9 L8.794,9.764 C8.63999956,10.0695393 8.34047519,10.2751322 8,10.309 L8,10.309 L3.407,10.763 L7.257,14.574 C7.51403251,14.828649 7.61346308,15.2022785 7.517,15.551 L7.517,15.551 L6.1,20.7 L10.804,18.368 C11.0837081,18.2306185 11.4112919,18.2306185 11.691,18.368 L11.691,18.368 L16.4,20.7 L14.982,15.556 C14.8859275,15.2075863 14.9853298,14.8344453 15.242,14.58 L15.242,14.58 L19.09,10.769 L14.5,10.315 C14.1595248,10.2811322 13.8600004,10.0755393 13.706,9.77 L13.706,9.77 L11.248,4.9 Z M21.609,15.6 C22.0232136,15.6 22.359,15.9357864 22.359,16.35 L22.359,16.35 L22.359,17.24 L23.25,17.24 C23.6642136,17.24 24,17.5757864 24,17.99 C24,18.4042136 23.6642136,18.74 23.25,18.74 L23.25,18.74 L22.359,18.74 L22.359,19.6 C22.359,20.0142136 22.0232136,20.35 21.609,20.35 C21.1947864,20.35 20.859,20.0142136 20.859,19.6 L20.859,19.6 L20.859,18.74 L20,18.74 C19.5857864,18.74 19.25,18.4042136 19.25,17.99 C19.25,17.5757864 19.5857864,17.24 20,17.24 L20,17.24 L20.859,17.24 L20.859,16.35 C20.859,15.9357864 21.1947864,15.6 21.609,15.6 Z M3.25,0 C3.66421356,0 4,0.335786438 4,0.75 L4,0.75 L4,2.5 L5.75,2.5 C6.16421356,2.5 6.5,2.83578644 6.5,3.25 C6.5,3.66421356 6.16421356,4 5.75,4 L5.75,4 L4,4 L4,5.75 C4,6.16421356 3.66421356,6.5 3.25,6.5 C2.83578644,6.5 2.5,6.16421356 2.5,5.75 L2.5,5.75 L2.5,4 L0.75,4 C0.335786438,4 0,3.66421356 0,3.25 C0,2.83578644 0.335786438,2.5 0.75,2.5 L0.75,2.5 L2.5,2.5 L2.5,0.75 C2.5,0.335786438 2.83578644,0 3.25,0 Z"
+                            fill="inherit"></path>
+                        </g>
+                      </svg></span>
+
+                    報酬
+
+                  </div>
+                </div>
+              </div>
+              <div class="MyAccount__group1_new MyAccount__rewards_new MyAccount__padding_20 ">
+                <div class="sc-p36blq-0 ikjAvZ">
+                  <div class="sc-p36blq-1 uVxjb"><span class="MyAccount__icon_rewards"><svg viewBox="0 0 24 24"
+                        focusable="false" aria-hidden="true" size="48" height="48px" width="48px" color="rewards"
+                        class="sc-14dq9fm-0 coYPON">
+                        <g fill-rule="evenodd">
+                          <path
+                            d="M12.737,1 L13.0347199,1.00370448 C18.4809167,1.14078376 23.0652106,5.08053864 23.8752164,10.3723713 C24.6999496,15.760419 21.3633694,20.9264869 16.0305647,22.5183412 C10.69776,24.1101955 4.97575465,21.6481359 2.57752714,16.7297798 L2.57752714,16.7297798 L1.91246021,18.1899904 L0,17.3580694 L1.2756717,14.5583944 C1.74604792,13.5271591 2.98233164,13.0628778 4.03857971,13.5207956 L4.03857971,13.5207956 L6.87375483,14.7548628 L6.02121233,16.6243827 L4.52978663,15.9746043 C6.50526596,19.8650763 11.0515728,21.8117874 15.3184172,20.5942544 C19.5852616,19.3767215 22.344531,15.3453832 21.866312,11.0276719 C21.3880929,6.70996062 17.8100297,3.34862969 13.3753755,3.05105286 C8.94072125,2.75347603 4.92588877,5.60530391 3.8479621,9.81859378 L3.8479621,9.81859378 L1.81610405,9.32128309 C3.06750807,4.42492996 7.57348179,0.992171482 12.7389121,1.00001341 L12.737,1 Z M11.2548178,8.57531706 C12.9473346,8.57531706 14.1077979,9.31105036 14.1077979,10.6996319 C14.1077979,11.7413238 13.4647253,12.4258934 12.3629136,13.3304668 L12.3629136,13.3304668 L10.9301395,14.4980213 L14.3277413,14.4980213 L14.3277413,15.8466952 L8.92341783,15.8466952 L8.92341783,14.6003486 L10.964702,12.8955758 C11.8853222,12.1209581 12.4487963,11.7208583 12.4487963,10.9953578 C12.4487963,10.2299495 11.8214339,9.92296763 11.006596,9.92296763 C10.412329,9.92171127 9.83036826,10.0883771 9.33083679,10.4028827 L9.33083679,10.4028827 L8.79773588,9.27011944 C9.52799858,8.80532793 10.3833519,8.56345504 11.2548178,8.57531706 Z M18.5307549,10.7947962 C18.8457467,10.7784021 19.1524966,10.8964842 19.3713867,11.118394 C19.5902768,11.3403039 19.6997231,11.6441596 19.6713185,11.9510948 C19.6826133,12.3504324 19.4706051,12.7241398 19.1180066,12.926419 C18.7654081,13.1286982 18.3280838,13.1275008 17.9766513,12.923294 C17.6252187,12.7190871 17.4153577,12.3442246 17.4289432,11.9449551 C17.3979202,11.6445789 17.501275,11.3457592 17.7124292,11.1253396 C17.9235834,10.9049201 18.2219329,10.7844088 18.5307549,10.7947962 Z M18.9863519,8.64694617 L15.9364701,13.0286013 L15.3342442,13.0286013 L18.3956468,8.64694617 L18.9863519,8.64694617 Z M18.537039,11.3442939 C18.2689175,11.3442939 18.1526617,11.5540648 18.1526617,11.9449551 C18.1526617,12.3358454 18.2689175,12.5405 18.537039,12.5405 C18.8323915,12.5405 18.9214162,12.3317523 18.9214162,11.9449551 C18.9214162,11.5581579 18.8323915,11.3442939 18.537039,11.3442939 Z M15.8474454,8.57122396 C16.1625591,8.5554113 16.4691831,8.67400716 16.6878308,8.89626768 C16.9064785,9.1185282 17.0156198,9.42256758 16.9869617,9.72956903 C16.9982565,10.1289066 16.7862483,10.502614 16.4336498,10.7048933 C16.0810513,10.9071725 15.6437271,10.9059751 15.2922945,10.7017682 C14.9408619,10.4975613 14.7310009,10.1226989 14.7445864,9.72342939 C14.7135983,9.42269294 14.8170404,9.12353173 15.0283496,8.9027677 C15.2396588,8.68200367 15.5382492,8.56114385 15.8474454,8.57122396 Z M15.8474454,9.12276812 C15.579324,9.12276812 15.4630682,9.33356237 15.4630682,9.72342939 C15.4630682,10.1132964 15.579324,10.317951 15.8474454,10.317951 L15.8474454,10.317951 C16.1480347,10.317951 16.2328701,10.1122731 16.2328701,9.72342939 C16.2328701,9.33458564 16.142798,9.12276812 15.8474454,9.12276812 Z"
+                            fill="inherit"></path>
+                        </g>
+                      </svg></span></div>
+                  <div class="sc-p36blq-1 uVxjb"><span class="MyAccount__content_heading ">
+
+                      2% の報酬が戻ってきます。
+
+                    </span><span class="MyAccount__content_txt_guest">
+
+                      店舗とオンラインで。
+
+                    </span></div>
+                </div>
+                <div class="sc-p36blq-0 ikjAvZ">
+                  <div class="sc-p36blq-1 uVxjb"><span>
+                      <div size="48" class="sc-18w9h10-0 emLOss"><svg viewBox="0 0 40 40" focusable="false"
+                          aria-hidden="true" size="48" height="48px" width="48px" color="rewards"
+                          class="sc-14dq9fm-0 coYPON">
+                          <g fill-rule="evenodd">
+                            <path
+                              d="M3.74926 6.25348C1.74146 6.25348 0.102292 7.8318 0.00479222 9.81542L0.000203451 10.0025V25.0238C0.000203451 25.7139 0.559708 26.2734 1.24989 26.2734C1.89947 26.2734 2.4333 25.7778 2.49386 25.1441L2.49958 25.0238V10.0025C2.49958 9.35295 2.99519 8.81913 3.62891 8.75857L3.74926 8.75285H22.4945C23.1441 8.75285 23.678 9.24846 23.7385 9.88218L23.7442 10.0025V25.0238C23.7442 25.7139 24.3037 26.2734 24.9939 26.2734C25.6435 26.2734 26.1773 25.7778 26.2379 25.1441L26.2436 25.0238V10.0025C26.2436 7.99473 24.6653 6.35557 22.6817 6.25807L22.4945 6.25348H3.74926ZM29.9923 11.8321C29.3021 11.8321 28.7426 12.3916 28.7426 13.0818C28.7426 13.7314 29.2382 14.2652 29.872 14.3257L29.9923 14.3315L34.0708 14.3284C36.0389 14.4659 37.5239 16.0467 37.4977 17.9694L37.4904 18.1565L37.4931 28.3876C37.5033 28.543 37.387 28.6925 37.2646 28.736L37.2122 28.7478H34.778C34.2633 27.2917 32.8746 26.2484 31.2423 26.2484C29.6099 26.2484 28.2212 27.2917 27.7065 28.7478H14.7831C14.2684 27.2917 12.8797 26.2484 11.2474 26.2484C9.61498 26.2484 8.22628 27.2917 7.71162 28.7478H1.24969C0.559503 28.7478 0 29.3073 0 29.9975C0 30.6471 0.495615 31.1809 1.12933 31.2415L1.24969 31.2472H7.71163C8.22631 32.7033 9.615 33.7466 11.2474 33.7466C12.8797 33.7466 14.2684 32.7033 14.7831 31.2472H27.7065C28.2212 32.7033 29.6099 33.7466 31.2423 33.7466C32.8749 33.7466 34.2639 32.7029 34.7783 31.2463L37.2989 31.2442C38.823 31.1382 40.003 29.8884 39.9956 28.4648L39.9898 28.3059L39.9871 18.2382C40.1997 14.9936 37.7418 12.1958 34.3832 11.8514L34.1579 11.8321H29.9923ZM12.4969 29.9801L12.4968 29.9975L12.4969 30.015C12.4875 30.6971 11.9317 31.2472 11.2474 31.2472C10.5572 31.2472 9.99767 30.6877 9.99767 29.9975C9.99767 29.3073 10.5572 28.7478 11.2474 28.7478C11.9317 28.7478 12.4876 29.2979 12.4969 29.9801ZM31.2423 28.7478C31.9263 28.7478 32.482 29.2974 32.4918 29.9791L32.4917 29.9975L32.4918 30.0159C32.482 30.6976 31.9263 31.2472 31.2423 31.2472C30.5521 31.2472 29.9926 30.6877 29.9926 29.9975C29.9926 29.3073 30.5521 28.7478 31.2423 28.7478Z"
+                              fill="inherit"></path>
+                          </g>
+                        </svg><svg viewBox="0 0 40 40" focusable="false" aria-hidden="true" size="48" height="48px"
+                          width="48px" color="rewards" class="sc-14dq9fm-0 coYPON">
+                          <g fill-rule="evenodd">
+                            <path
+                              d="M8.37455 12.4909C7.09708 12.4909 5.93547 13.3013 5.84458 14.524L5.83887 14.679V20.3189C5.83887 21.0091 6.39837 21.5686 7.08855 21.5686C7.73814 21.5686 8.27196 21.073 8.33252 20.4393L8.33824 20.3189L8.33916 14.9921L8.37455 14.9903H18.0195L18.0563 14.9921L18.0558 20.3189C18.0558 20.9685 18.5514 21.5023 19.1851 21.5629L19.3055 21.5686C19.9551 21.5686 20.4889 21.073 20.5494 20.4393L20.5552 20.3189V14.679C20.5552 13.4226 19.4446 12.5619 18.1785 12.4951L18.0195 12.4909H8.37455Z"
+                              fill="inherit"></path>
+                          </g>
+                        </svg></div>
+                    </span></div>
+                  <div class="sc-p36blq-1 uVxjb"><span class="MyAccount__content_heading ">
+
+                      送料無料、最低$35。
+
+                    </span><span class="MyAccount__content_txt_guest">
+
+                      対象商品のみ。
+
+                    </span></div>
+                </div>
+                <div class="sc-p36blq-0 ikjAvZ">
+                  <div class="sc-p36blq-1 uVxjb"><span class="MyAccount__icon_rewards"><svg viewBox="0 0 64 64"
+                        focusable="false" aria-hidden="true" size="48" height="48px" width="48px" color="rewards"
+                        class="sc-14dq9fm-0 coYPON">
+                        <g fill-rule="evenodd">
+                          <path
+                            d="M27.3318788,6.10715152 C26.4484848,5.00945455 25.6155152,3.97478788 24.8591515,3.00993939 L22.4969697,2.84217094e-14 L20.1638788,3.03127273 C19.5132121,3.87781818 18.7985455,4.78933333 18.0392727,5.75806061 C10.8557576,14.9226667 -3.55271368e-15,28.7738182 -3.55271368e-15,40.9260606 C-3.55271368e-15,53.3391515 10.102303,63.4375758 22.5192727,63.4375758 C34.9362424,63.4375758 45.0385455,53.3391515 45.0385455,40.9260606 C45.0385455,28.1066667 34.3825455,14.8673939 27.3318788,6.10715152 M22.5473939,9.64557576 C22.5968485,9.70860606 22.6482424,9.77163636 22.6996364,9.83466667 C28.2550303,16.7369697 36.2210909,26.6395152 38.4746667,36.0465455 C26.7015758,44.5895758 17.2906667,29.8821818 6.74230303,35.6324848 C9.22084848,26.7132121 16.9997576,16.7233939 22.5473939,9.64557576"
+                            fill="inherit"></path>
+                        </g>
+                      </svg></span></div>
+                  <div class="sc-p36blq-1 uVxjb"><span class="MyAccount__content_heading ">
+
+                      リサイクル インク カートリッジ 1 個につき 2 ドルの特典が還元されます。
+
+                    </span><span class="MyAccount__content_txt_guest">
+
+                      月あたり10件まで。
+                      最低限の購入が必要です。
+
+                    </span></div>
+                </div>
+              </div>
+              <div class="MyAccount__join_btn_new"><button tabindex="0" type="button" width="auto" id="joinTodayBtn"
+                  class="sc-1gktvoi-0 cJztpE" title="今日参加します"><span class="sc-1gktvoi-1 jtGFho">
+
+                    サインアップ
+
+                  </span></button></div>
+            </div>
+          </div>
+          <div class="sc-p36blq-1 uVxjb">
+            <div aria-disabled="true" class="sc-hhlxhc-0 hgapSl">
+              <div class="sc-p36blq-0 dqYZZt">
+                <div class="sc-p36blq-1 uVxjb">
+                  <div class="MyAccount__heading_title_acct">
+
+                    よくある質問
+
+                  </div>
+                </div>
+                <div class="sc-p36blq-1 uVxjb"><span class="MyAccount__acctbtn"><button tabindex="0" type="button"
+                      width="100%" class="sc-1gktvoi-0 IqnfB" href="/hc"><span class="sc-1gktvoi-1 jtGFho">
+
+                        その他のヘルプ
+
+                      </span></button></span></div>
+              </div>
+              <div class="MyAccount__rewards_new"><span class="MyAccount__faq_links_new">
+                  <div color="link_blue" class="sc-izol8d-0 dVkHdI"><a aria-label="返品ポリシーは何ですか?" role="button"
+                      tabindex="0" target="_self" href="/hc?id=4b8b9d06-566c-4b72-9788-99f4adea6fab">
+
+                      返品ポリシーは何ですか?
+
+                    </a></div>
+                </span><span class="MyAccount__faq_links_new">
+                  <div color="link_blue" class="sc-izol8d-0 dVkHdI"><a aria-label="注文した商品が不足している場合はどうすればよいですか?"
+                      role="button" tabindex="0" target="_self" href="/hc?id=fe67d7f4-db51-49b0-909d-3e5372471149">
+
+                      注文した商品が不足している場合はどうすればよいですか?
+
+                    </a></div>
+                </span><span class="MyAccount__faq_links_new">
+                  <div color="link_blue" class="sc-izol8d-0 dVkHdI"><a
+                      aria-label="Staples Rewards の残高を確認するにはどうすればよいですか?" role="button" tabindex="0" target="_self"
+                      href="/hc?id=81b7275b-c6f8-4d4d-aac5-53e51bdaf49e">
+
+                      Staples Rewards の残高を確認するにはどうすればよいですか?
+
+                    </a></div>
+                </span><span class="MyAccount__faq_links_new">
+                  <div color="link_blue" class="sc-izol8d-0 dVkHdI"><a aria-label="アイテムを返品するにはどうすればよいですか?" role="button"
+                      tabindex="0" target="_self" href="/hc?id=53b1c7e3-d0ba-4217-be8b-de1a55fbc028">
+
+                      アイテムを返品するにはどうすればよいですか?
+
+                    </a></div>
+                </span><span class="MyAccount__faq_links_new">
+                  <div color="link_blue" class="sc-izol8d-0 dVkHdI"><a aria-label="私の配達について詳しく教えていただけますか?" role="button"
+                      tabindex="0" target="_self" href="/hc?id=56c09a7a-cd63-4a26-b277-29023d9ece2e">
+
+                      私の配達について詳しく教えていただけますか?
+
+                    </a></div>
+                </span></div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-p36blq-0 kvoFUS">
+          <div class="sc-p36blq-1 uVxjb">
+            <div class="sc-p36blq-0 HecIm">
+              <div class="sc-p36blq-1 uVxjb">
+                <div class="GuestUser__carouselContainer GuestUser__mar_6">
+                  <div class="sc-p36blq-0 dQkGog">
+                    <div span="12" class="sc-p36blq-1 byNfEv">
+                      <div id="" class="sc-1u3l2ng-2 kLxBmq">
+                        <div id="recentlyViewedTitle" direction="row" class="sc-pc4pjv-0 kmdSfU">
+                          <h2>
+                            最近見たもの
+                          </h2>
+                        </div>
+                        <div class="sc-1u3l2ng-3 kTYzML">
+                          <div dir="left" id="arrow-left" role="button" tabindex="-1" class="sc-1u3l2ng-0 iFcpdK"></div>
+                          <div role="list" aria-labelledby="listId" class="sc-1u3l2ng-4 fSATBZ">
+                            <div class="sc-1u3l2ng-5 lcYnDa" style="left: 0px;">
+                              <div tabindex="0" role="listitem" id="carousel-item-0" class="sc-1u3l2ng-6 bMYVZA">
+                                <div class="GuestUser__carouselItem">
+                                  <div class="standard-tile__standard_tile_container standard-tile__carouselTile null
+       ">
+                                    <div class="standard-tile__standard_tile_wrapper
+        
+        
+        
+         null
+        null
+        null">
+                                      <div class=" ">
+                                        <div class="standard-tile__badge_image_holder "><a
+                                            class="standard-tile__image_wrapper"
+                                            aria-label="Neenah Exact Index 110 ポンドカードストック紙、8.5 インチ x 11 インチ、白、250 枚/パック (WAU40411) 、1/1"
+                                            tabindex="0"
+                                            href="/Wausau-Paper-Exact-Index-Card-Stock-White-8-1-2-W-x-11-L-250-Pack/product_958751">
+                                            <div><img loading="lazy" decoding="async"
+                                                class="standard-tile__image picture__img_resp IElazySizesClass"
+                                                alt="Neenah Exact Index 110 ポンドカードストック紙、8.5 インチ x 11 インチ、白、250 枚/パック (WAU40411)"
+                                                width="120" height="120"
+                                                srcset="https://www.staples-3p.com/s7/is/image/Staples/sp43812196_sc7?wid=120&amp;hei=120 1x, https://www.staples-3p.com/s7/is/image/Staples/sp43812196_sc7?wid=240&amp;hei=240 2x"
+                                                data-srcset="https://www.staples-3p.com/s7/is/image/Staples/sp43812196_sc7?wid=120&amp;hei=120 1x, https://www.staples-3p.com/s7/is/image/Staples/sp43812196_sc7?wid=240&amp;hei=240 2x"
+                                                data-sizes="auto"></div>
+                                          </a>
+                                          <div class="standard-tile__badge_container"></div>
+                                        </div>
+                                        <div class="null">
+                                          <div class="standard-tile__title "><a aria-hidden="true" tabindex="-1"
+                                              href="/Wausau-Paper-Exact-Index-Card-Stock-White-8-1-2-W-x-11-L-250-Pack/product_958751">
+
+                                              Neenah Exact Index 110
+                                              ポンドカードストック紙、8.5 インチ x 11 インチ、白、250 枚/パック (WAU40411)
+
+                                            </a></div>
+                                          <div class="standard-tile__rating_wrapper" role="link"
+                                            aria-label="5 つ星のうち 4 レビュー数 50" tabindex="-1">
+                                            <div class="rating__rating rating__ratingSparq">
+                                              <div class="tooltip__tooltip_sparq ">
+                                                <div class="tooltip__tooltip_wrapper_sparq ">
+                                                  <div><span class="rating__rating_container " aria-hidden="true">
+                                                      <div class="icon__icon   " data-icon="icon">
+                                                        <div class="uiStyles__text_yellow "
+                                                          style="height: 16px; width: 16px; opacity: 1;"><svg
+                                                            viewBox="0 0 40 40" version="1.1" aria-hidden="true"
+                                                            fill="currentColor" focusable="false"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                              <path
+                                                                d="M12.406258,11.8575126 L17.6683667,1.42311989 C18.1156427,0.549552641 19.0144183,0 19.9958333,0 C20.9772484,0 21.876024,0.549552641 22.3232999,1.42311989 L27.5934578,11.8641607 L37.6230576,12.8579238 C38.6308551,12.9416713 39.4978754,13.6040051 39.8436924,14.5543103 C40.1895095,15.5046155 39.9509432,16.5692734 39.2326935,17.2811168 L30.9192483,25.5208389 L34.0029361,36.7227329 C34.2660538,37.7135925 33.9234869,38.7666427 33.1277519,39.4130477 C32.3320168,40.0594528 31.2311177,40.1789837 30.3220531,39.7218465 L19.9958712,34.6085755 L9.69147244,39.7117572 C8.77554786,40.1723176 7.67464868,40.0527866 6.87891367,39.4063816 C6.08317867,38.7599765 5.74061176,37.7069264 6.00669147,36.7051131 L9.08733074,25.5144753 L0.767328969,17.2744735 C0.0490561451,16.5626072 -0.189510112,15.4979493 0.156306915,14.5476441 C0.502123942,13.5973389 1.36914426,12.9350051 2.35722862,12.853053 L12.406258,11.8575126 Z"
+                                                                fill="inherit"></path>
+                                                            </g>
+                                                          </svg></div>
+                                                      </div>
+                                                      <div class="icon__icon   " data-icon="icon">
+                                                        <div class="uiStyles__text_yellow "
+                                                          style="height: 16px; width: 16px; opacity: 1;"><svg
+                                                            viewBox="0 0 40 40" version="1.1" aria-hidden="true"
+                                                            fill="currentColor" focusable="false"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                              <path
+                                                                d="M12.406258,11.8575126 L17.6683667,1.42311989 C18.1156427,0.549552641 19.0144183,0 19.9958333,0 C20.9772484,0 21.876024,0.549552641 22.3232999,1.42311989 L27.5934578,11.8641607 L37.6230576,12.8579238 C38.6308551,12.9416713 39.4978754,13.6040051 39.8436924,14.5543103 C40.1895095,15.5046155 39.9509432,16.5692734 39.2326935,17.2811168 L30.9192483,25.5208389 L34.0029361,36.7227329 C34.2660538,37.7135925 33.9234869,38.7666427 33.1277519,39.4130477 C32.3320168,40.0594528 31.2311177,40.1789837 30.3220531,39.7218465 L19.9958712,34.6085755 L9.69147244,39.7117572 C8.77554786,40.1723176 7.67464868,40.0527866 6.87891367,39.4063816 C6.08317867,38.7599765 5.74061176,37.7069264 6.00669147,36.7051131 L9.08733074,25.5144753 L0.767328969,17.2744735 C0.0490561451,16.5626072 -0.189510112,15.4979493 0.156306915,14.5476441 C0.502123942,13.5973389 1.36914426,12.9350051 2.35722862,12.853053 L12.406258,11.8575126 Z"
+                                                                fill="inherit"></path>
+                                                            </g>
+                                                          </svg></div>
+                                                      </div>
+                                                      <div class="icon__icon   " data-icon="icon">
+                                                        <div class="uiStyles__text_yellow "
+                                                          style="height: 16px; width: 16px; opacity: 1;"><svg
+                                                            viewBox="0 0 40 40" version="1.1" aria-hidden="true"
+                                                            fill="currentColor" focusable="false"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                              <path
+                                                                d="M12.406258,11.8575126 L17.6683667,1.42311989 C18.1156427,0.549552641 19.0144183,0 19.9958333,0 C20.9772484,0 21.876024,0.549552641 22.3232999,1.42311989 L27.5934578,11.8641607 L37.6230576,12.8579238 C38.6308551,12.9416713 39.4978754,13.6040051 39.8436924,14.5543103 C40.1895095,15.5046155 39.9509432,16.5692734 39.2326935,17.2811168 L30.9192483,25.5208389 L34.0029361,36.7227329 C34.2660538,37.7135925 33.9234869,38.7666427 33.1277519,39.4130477 C32.3320168,40.0594528 31.2311177,40.1789837 30.3220531,39.7218465 L19.9958712,34.6085755 L9.69147244,39.7117572 C8.77554786,40.1723176 7.67464868,40.0527866 6.87891367,39.4063816 C6.08317867,38.7599765 5.74061176,37.7069264 6.00669147,36.7051131 L9.08733074,25.5144753 L0.767328969,17.2744735 C0.0490561451,16.5626072 -0.189510112,15.4979493 0.156306915,14.5476441 C0.502123942,13.5973389 1.36914426,12.9350051 2.35722862,12.853053 L12.406258,11.8575126 Z"
+                                                                fill="inherit"></path>
+                                                            </g>
+                                                          </svg></div>
+                                                      </div>
+                                                      <div class="icon__icon   " data-icon="icon">
+                                                        <div class="uiStyles__text_yellow "
+                                                          style="height: 16px; width: 16px; opacity: 1;"><svg
+                                                            viewBox="0 0 40 40" version="1.1" aria-hidden="true"
+                                                            fill="currentColor" focusable="false"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                              <path
+                                                                d="M12.406258,11.8575126 L17.6683667,1.42311989 C18.1156427,0.549552641 19.0144183,0 19.9958333,0 C20.9772484,0 21.876024,0.549552641 22.3232999,1.42311989 L27.5934578,11.8641607 L37.6230576,12.8579238 C38.6308551,12.9416713 39.4978754,13.6040051 39.8436924,14.5543103 C40.1895095,15.5046155 39.9509432,16.5692734 39.2326935,17.2811168 L30.9192483,25.5208389 L34.0029361,36.7227329 C34.2660538,37.7135925 33.9234869,38.7666427 33.1277519,39.4130477 C32.3320168,40.0594528 31.2311177,40.1789837 30.3220531,39.7218465 L19.9958712,34.6085755 L9.69147244,39.7117572 C8.77554786,40.1723176 7.67464868,40.0527866 6.87891367,39.4063816 C6.08317867,38.7599765 5.74061176,37.7069264 6.00669147,36.7051131 L9.08733074,25.5144753 L0.767328969,17.2744735 C0.0490561451,16.5626072 -0.189510112,15.4979493 0.156306915,14.5476441 C0.502123942,13.5973389 1.36914426,12.9350051 2.35722862,12.853053 L12.406258,11.8575126 Z"
+                                                                fill="inherit"></path>
+                                                            </g>
+                                                          </svg></div>
+                                                      </div>
+                                                      <div class="icon__icon   " data-icon="icon">
+                                                        <div class="uiStyles__text_yellow "
+                                                          style="height: 16px; width: 16px; opacity: 1;"><svg
+                                                            viewBox="0 0 40 40" version="1.1" aria-hidden="true"
+                                                            fill="currentColor" focusable="false"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                              <path
+                                                                d="M12.406258,11.8575126 L17.6683667,1.42311989 C18.1156427,0.549552641 19.0144183,-3.01980663e-13 19.9958333,-3.01980663e-13 C20.9772484,-3.01980663e-13 21.876024,0.549552641 22.3232999,1.42311989 L27.5934578,11.8641607 L37.6230576,12.8579238 C38.6308551,12.9416713 39.4978754,13.6040051 39.8436924,14.5543103 C40.1895095,15.5046155 39.9509432,16.5692734 39.2326935,17.2811168 L30.9192483,25.5208389 L34.0029361,36.7227329 C34.2660538,37.7135925 33.9234869,38.7666427 33.1277519,39.4130477 C32.3320168,40.0594528 31.2311177,40.1789837 30.3220531,39.7218465 L19.9958712,34.6085755 L9.69147244,39.7117572 C8.77554786,40.1723176 7.67464868,40.0527866 6.87891367,39.4063816 C6.08317867,38.7599765 5.74061176,37.7069264 6.00669147,36.7051131 L9.08733074,25.5144753 L0.767328969,17.2744735 C0.0490561451,16.5626072 -0.189510112,15.4979493 0.156306915,14.5476441 C0.502123942,13.5973389 1.36914426,12.9350051 2.35722862,12.853053 L12.406258,11.8575126 Z M20.0949211,2.55597429 L20.0725008,2.52910139 C20.0517644,2.5105578 20.0246065,2.49981659 19.9958333,2.49981659 C19.9526736,2.49981659 19.9131481,2.5239843 19.8969474,2.55557405 L14.3290226,13.5964307 C14.1364165,13.9783568 13.7618807,14.2352672 13.3362207,14.2774366 L2.58396173,15.3424874 C2.54831616,15.3454495 2.51764984,15.3688761 2.50541837,15.4024882 C2.4931869,15.4361003 2.50162494,15.473757 2.52671824,15.4986266 L11.3660697,24.2529843 C11.6870533,24.5708814 11.8115147,25.0372457 11.6916108,25.4728052 L8.41981305,37.3576454 C8.40920753,37.3975841 8.42301541,37.4400295 8.45508918,37.4660842 C8.48716296,37.4921389 8.53153701,37.4969569 8.57525234,37.475001 L19.4411218,32.0937292 C19.7906482,31.9206278 20.2009457,31.9206163 20.5504818,32.093698 L31.4382103,37.4850592 C31.4751285,37.5036231 31.5195026,37.4988051 31.5515763,37.4727504 C31.5836501,37.4466957 31.597458,37.4042503 31.5898145,37.3752653 L28.3150547,25.4794714 C28.1951956,25.0440745 28.3195171,24.5778817 28.6402609,24.2599823 L37.4729693,15.5056017 C37.4983744,15.4804232 37.5068124,15.4427664 37.494581,15.4091544 C37.4823495,15.3755423 37.4516832,15.3521157 37.3963245,15.3473581 L26.6637786,14.2841028 C26.2382771,14.2419491 25.86385,13.9852119 25.6711787,13.6034971 L20.0949211,2.55597429 Z"
+                                                                fill="inherit"></path>
+                                                            </g>
+                                                          </svg></div>
+                                                      </div>
+                                                    </span></div><span class="tooltip__tooltiptext_sparq null"
+                                                    style="left: 50%; transform: translateX(-50%);">
+                                                    <div class="tooltip__tooltip_tip_sparq null" style="left: 50%;">
+                                                    </div>
+                                                    <div aria-live="polite" style="min-width: 100px;">
+
+                                                      5つ星のうち4
+
+                                                    </div>
+                                                  </span>
+                                                </div>
+                                              </div><span
+                                                class="rating__reviewLinkWrapper rating__review_link rating__textDecoration"
+                                                aria-label="" role="link" tabindex="-1">
+
+                                                50
+
+                                              </span>
+                                            </div>
+                                          </div>
+                                          <div class="standard-tile__price_wrapper "><span
+                                              class="standard-tile__final_price false"><span
+                                                class="standard-tile__ada_hidden">
+
+                                                最終価格
+
+                                              </span>
+
+                                              $20.39
+
+                                            </span></div>
+                                          <div class="standard-tile__uom_price_per_unit" role="text"
+                                            aria-label="測定単位 250/パック"><span aria-hidden="true">
+
+                                              250/パック
+
+                                            </span></div>
+                                          <div class="standard-tile__delivery_date_wrapper"><svg viewBox="0 0 40 40"
+                                              focusable="false" aria-hidden="true" size="10" height="10px" width="10px"
+                                              color="cerulean" class="sc-14dq9fm-0 deQvGl">
+                                              <g fill-rule="evenodd">
+                                                <path
+                                                  d="M37.5,6.1c1.4,0,2.5,1.1,2.5,2.5S38.9,11,37.5,11H26.1c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5H37.5z M35.5,17.5  c1.4,0,2.5,1.1,2.5,2.5c0,1.4-1.1,2.5-2.5,2.5H14.3c-1.4,0-2.5-1.1-2.5-2.5c0-1.4,1.1-2.5,2.5-2.5H35.5z M33.5,29  c1.4,0,2.5,1.1,2.5,2.5s-1.1,2.5-2.5,2.5H2.5c-1.4,0-2.5-1.1-2.5-2.5S1.1,29,2.5,29H33.5z"
+                                                  fill="inherit"></path>
+                                              </g>
+                                            </svg><span class="standard-tile__delivery_icon_txt">
+
+                                            </span>
+                                            <span class="standard-tile__more_delivery_info">
+                                              明日までに
+                                            </span><span class="standard-tile__delivery_icon_txt">
+                                              翌日お届け
+                                            </span><span class="standard-tile__more_delivery_info">&nbsp;<font
+                                                style="vertical-align: inherit;"></span>
+                                          </div>
+                                          <div class="standard-tile__pickup_msg"></div>
+                                          <div class="standard-tile__autorestock_msg"><span
+                                              class="standard-tile__ars_price">
+
+                                              $19.37
+
+                                            </span><a
+                                              aria-label="Neenah Exact Index 110 ポンドカードストック紙、8.5 インチ x 11 インチ、白、250 枚/パック (WAU40411)"
+                                              tabindex="0"
+                                              href="/Wausau-Paper-Exact-Index-Card-Stock-White-8-1-2-W-x-11-L-250-Pack/product_958751?ars=y">
+                                              <div class="standard-tile__icon_wrapper"><svg viewBox="0 0 40 40"
+                                                  focusable="false" aria-hidden="true" size="20" height="20px"
+                                                  width="20px" color="staples_blue" class="sc-14dq9fm-0 bivALz">
+                                                  <g fill-rule="evenodd">
+                                                    <path
+                                                      d="M.349,20H6.168v-.116c0-7.756,6.31-14.071,14.071-14.071,4.117,0,7.819,1.779,10.393,4.608l-3.133,3.133c-.318,.318-.092,.863,.357,.863h9.896c.28,0,.506-.227,.506-.506V4.011c0-.453-.545-.68-.863-.357l-2.646,2.646C31.118,2.425,25.96,0,20.234,0,9.253,0,.349,8.903,.349,19.884v.116Z"
+                                                      fill="inherit"></path>
+                                                  </g>
+                                                </svg><svg viewBox="0 0 40 40" focusable="false" aria-hidden="true"
+                                                  size="20" height="20px" width="20px" color="brand"
+                                                  class="sc-14dq9fm-0 huFWMd">
+                                                  <g fill-rule="evenodd">
+                                                    <path
+                                                      d="M39.651,20h-5.814v.116c0,7.756-6.31,14.071-14.071,14.071-4.117,0-7.819-1.779-10.393-4.608l3.133-3.133c.318-.318,.092-.863-.357-.863H2.254c-.28,0-.506,.227-.506,.506v9.901c0,.453,.545,.68,.863,.357l2.646-2.646c3.63,3.876,8.788,6.295,14.514,6.295,10.981,0,19.884-8.903,19.884-19.884v-.116l-.005,.005Z"
+                                                      fill="inherit"></path>
+                                                  </g>
+                                                </svg></div><span class="standard-tile__ars_text">
+
+                                                自動補充
+
+                                              </span>
+                                            </a>
+                                            <div class="standard-tile__ars_badge">
+                                              <div id="" type="primary" class="sc-3bqfgt-0 bjKOVD">
+
+
+                                                5
+
+
+                                                %
+                                                割引
+
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="standard-tile__cta_wrapper">
+                                        <div id="" class="sc-1xkzaza-0 eUHGXD">
+                                          <div class="sc-1xkzaza-1 lacKxL">
+                                            <div class="sc-1xkzaza-3 jATruN">
+                                              <div><label class="sc-1xkzaza-4 bWsIrM"></label>
+                                                <div tabindex="0" role="button" aria-label="1、折りたたまれた未定義 折りたたまれた数量、未定義"
+                                                  class="sc-1xkzaza-6 fWtvAa">
+                                                  <div class="sc-1xkzaza-5 fciwXc">
+
+                                                    1
+
+                                                  </div><svg viewBox="0 0 40 40" focusable="false" aria-hidden="true"
+                                                    size="32" height="32px" width="32px" color="dark_gray_1"
+                                                    title="数量ドロップダウン矢印" class="sc-14dq9fm-0 dVSquC"
+                                                    style="transform: rotate(270deg);">
+                                                    <g fill-rule="evenodd">
+                                                      <path
+                                                        d="M16,19.5656462 C16,20.0656462 16.1666667,20.5656462 16.5,20.8989795 L21.6666667,25.8989795 C22.1666667,26.3989795 23,26.3989795 23.5,25.8989795 C24,25.3989795 24,24.5656462 23.5,24.0656462 C23.5,24.0656462 23.5,24.0656462 23.3333333,23.8989795 L19,19.5656462 L23.5,15.2323128 C24,14.7323128 24,13.8989795 23.5,13.3989795 C23,12.8989795 22.3333333,12.8989795 21.6666667,13.2323128 L21.6666667,13.2323128 L16.5,18.2323128 C16.1666667,18.5656462 16,19.0656462 16,19.5656462 Z"
+                                                        fill="inherit"></path>
+                                                    </g>
+                                                  </svg>
+                                                </div>
+                                                <div role="menu" tabindex="-1" class="sc-1xkzaza-7 eBloHG">
+                                                  <div role="menuitem" id="itemQty_0" aria-label="1、チェック済み" tabindex="0"
+                                                    class="sc-1xkzaza-9 dPhDmq"><span class="sc-1xkzaza-8 iJXTHd"><svg
+                                                        viewBox="0 0 16 16" focusable="false" aria-hidden="true"
+                                                        size="16" height="16px" width="16px" color="black"
+                                                        class="sc-14dq9fm-0 huGEfe">
+                                                        <g fill-rule="evenodd">
+                                                          <path
+                                                            d="M11.1832332,4.25881386 C11.4545143,3.94579719 11.9281812,3.91196384 12.2411979,4.18324495 C12.5257585,4.42986414 12.5795891,4.84374435 12.3832072,5.15213118 L12.3167668,5.24120967 L7.21128961,11.1284587 C6.86882984,11.4709184 6.32996034,11.4972615 5.95728369,11.2074878 L5.86778672,11.1284587 L3.21966991,8.48034185 C2.9267767,8.18744863 2.9267767,7.7125749 3.21966991,7.41968168 C3.48593648,7.15341512 3.90260016,7.12920906 4.19621165,7.34706353 L4.28033009,7.41968168 L6.51,9.64901176 L11.1832332,4.25881386 Z"
+                                                            fill="inherit"></path>
+                                                        </g>
+                                                      </svg></span>
+
+                                                    1
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_1" aria-label="2" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    2
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_2" aria-label="3" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    3
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_3" aria-label="4" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    4
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_4" aria-label="5" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    5
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_5" aria-label="6" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    6
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_6" aria-label="7" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    7
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_7" aria-label="8" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    8
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_8" aria-label="9" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    9
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_9" aria-label="10" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    10
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_10" aria-label="11" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    11
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_11" aria-label="12" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    12
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_12" aria-label="13" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    13
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_13" aria-label="14" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    14
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_14" aria-label="15" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    15
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_15" aria-label="16" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    16
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_16" aria-label="17" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    17
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_17" aria-label="18" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    18
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_18" aria-label="19" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    19
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_19" aria-label="20" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    20
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_20" aria-label="21" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    21
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_21" aria-label="22" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    22
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_22" aria-label="23" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    23
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_23" aria-label="24" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    24
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_24" aria-label="25" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    25
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_25" aria-label="26" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    26
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_26" aria-label="27" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    27
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_27" aria-label="28" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    28
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_28" aria-label="29" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    29
+
+                                                  </div>
+                                                  <div role="menuitem" id="itemQty_29" aria-label="30" tabindex="0"
+                                                    class="sc-1xkzaza-9 yEFaA">
+
+                                                    30
+
+                                                  </div>
+                                                  <div role="menuitem" tabindex="0" id="itemQty_30"
+                                                    aria-label="より大きな数量を入力してください30" class="sc-1xkzaza-9 yEFaA">
+
+
+                                                    30歳
+                                                    以上&nbsp;
+
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="standard-tile__cta_btn_wrapper null"><button tabindex="0"
+                                            type="button" width="100%"
+                                            aria-label="カートに追加 Neenah Exact Index 110 lb. 厚紙用紙、8.5 インチ x 11 インチ、白、250 枚/パック (WAU40411)"
+                                            class="sc-1gktvoi-0 fsFrUG"><span class="sc-1gktvoi-1 iaLcAe">
+                                              追加
+                                            </span></button></div>
+                                      </div>
+                                      <div class="standard-tile__top_section">
+                                        <div class="standard-tile__compare_btn"></div>
+                                        <div class="eco-badge__eco_badge_container">
+                                          <div class="popover__popover ">
+                                            <div class="popover__popover_wrapper" role="button" aria-label="エコID"
+                                              tabindex="0"><span class="popover__popovertext" style="z-index: auto;">
+                                                <div class="popover__popover_tip"></div>
+                                                <div class="popover__popovercontent" style="min-width: 50px;">
+
+                                                  エコID
+
+                                                </div>
+                                              </span>
+                                              <div>
+                                                <div class="null"><svg viewBox="0 0 40 40" focusable="false"
+                                                    aria-hidden="true" size="18" height="18px" width="18px"
+                                                    color="black" class="sc-14dq9fm-0 huGEfe">
+                                                    <g fill-rule="evenodd">
+                                                      <path d="M20,0c11,0,20,9,20,20s-9,20-20,20S0,31,0,20S9,0,20,0z"
+                                                        fill="#52B249"></path>
+                                                      <path
+                                                        d="M32,4L20,22.4l-5.2-6.9H7l13.3,18.2l0.7-1.1v0.1L36.6,8.9C35.4,7,33.8,5.3,32,4z"
+                                                        fill="#FFFFFF"></path>
+                                                    </g>
+                                                  </svg></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="standard-tile__atf_wrapper">
+                                          <div style="width: fit-content;"><a data-tip="true"
+                                              data-for="tooltip0.15511800541001453" class="tooltip__pointer"
+                                              currentitem="false">
+                                              <div role="button" class="atf__pointer " tabindex="0"
+                                                aria-label="リストに追加 Neenah Exact Index 110 ポンド カードストック紙、8.5 インチ x 11 インチ、白、250 枚/パック (WAU40411)"
+                                                style="height: 18px; width: 18px; font-size: 18px; display: inline-block;">
+                                                <div class="icon__icon   " data-icon="icon">
+                                                  <div class="uiStyles__text_black "
+                                                    style="height: 18px; width: 18px; opacity: 1;"><svg
+                                                      viewBox="0 0 40 40" version="1.1" aria-hidden="true"
+                                                      fill="currentColor" focusable="false"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                        <path
+                                                          d="M31.6681925,22.0833333 C32.3010188,22.0833333 32.8240108,22.5535898 32.9067815,23.1637157 L32.9181925,23.3333333 L32.9175113,28.75 L38.3348592,28.75 C39.0252151,28.75 39.5848592,29.3096441 39.5848592,30 C39.5848592,30.6328263 39.1146027,31.1558183 38.5044768,31.238589 L38.3348592,31.25 L32.9175113,31.25 L32.9181925,36.6666667 C32.9181925,37.3570226 32.3585485,37.9166667 31.6681925,37.9166667 C31.0353663,37.9166667 30.5123743,37.4464102 30.4296036,36.8362843 L30.4181925,36.6666667 L30.4175113,31.25 L25.0015259,31.25 C24.3111699,31.25 23.7515259,30.6903559 23.7515259,30 C23.7515259,29.3671737 24.2217823,28.8441817 24.8319083,28.761411 L25.0015259,28.75 L30.4175113,28.75 L30.4181925,23.3333333 C30.4181925,22.6429774 30.9778366,22.0833333 31.6681925,22.0833333 Z M4.25684466,28.755 C4.67105822,28.755 5.00684466,29.0907864 5.00684466,29.505 L5.00684466,30.505 C5.00684466,30.9192136 4.67105822,31.255 4.25684466,31.255 L2.42351132,31.255 C2.00929776,31.255 1.67351132,30.9192136 1.67351132,30.505 L1.67351132,29.505 C1.67351132,29.0907864 2.00929776,28.755 2.42351132,28.755 L4.25684466,28.755 Z M18.5924479,28.755 C19.0066615,28.755 19.3424479,29.0907864 19.3424479,29.505 L19.3424479,30.505 C19.3424479,30.9192136 19.0066615,31.255 18.5924479,31.255 L9.09330241,31.255 C8.67908885,31.255 8.34330241,30.9192136 8.34330241,30.505 L8.34330241,29.505 C8.34330241,29.0907864 8.67908885,28.755 9.09330241,28.755 L18.5924479,28.755 Z M4.25684466,18.75 C4.67105822,18.75 5.00684466,19.0857864 5.00684466,19.5 L5.00684466,20.5 C5.00684466,20.9142136 4.67105822,21.25 4.25684466,21.25 L2.42351132,21.25 C2.00929776,21.25 1.67351132,20.9142136 1.67351132,20.5 L1.67351132,19.5 C1.67351132,19.0857864 2.00929776,18.75 2.42351132,18.75 L4.25684466,18.75 Z M25.9084269,18.75 C26.3226405,18.75 26.6584269,19.0857864 26.6584269,19.5 L26.6584269,20.5 C26.6584269,20.9142136 26.3226405,21.25 25.9084269,21.25 L9.09330241,21.25 C8.67908885,21.25 8.34330241,20.9142136 8.34330241,20.5 L8.34330241,19.5 C8.34330241,19.0857864 8.67908885,18.75 9.09330241,18.75 L25.9084269,18.75 Z M4.25684466,8.755 C4.67105822,8.755 5.00684466,9.09078644 5.00684466,9.505 L5.00684466,10.505 C5.00684466,10.9192136 4.67105822,11.255 4.25684466,11.255 L2.42351132,11.255 C2.00929776,11.255 1.67351132,10.9192136 1.67351132,10.505 L1.67351132,9.505 C1.67351132,9.09078644 2.00929776,8.755 2.42351132,8.755 L4.25684466,8.755 Z M25.9084269,8.755 C26.3226405,8.755 26.6584269,9.09078644 26.6584269,9.505 L26.6584269,10.505 C26.6584269,10.9192136 26.3226405,11.255 25.9084269,11.255 L9.09330241,11.255 C8.67908885,11.255 8.34330241,10.9192136 8.34330241,10.505 L8.34330241,9.505 C8.34330241,9.09078644 8.67908885,8.755 9.09330241,8.755 L25.9084269,8.755 Z"
+                                                          fill="inherit"></path>
+                                                      </g>
+                                                    </svg></div>
+                                                </div>
+                                              </div>
+                                            </a>
+                                            <div class="__react_component_tooltip place-bottom type-dark"
+                                              id="tooltip0.15511800541001453" aria-haspopup="true" role="tooltip"
+                                              data-id="tooltip">
+                                              <div></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div dir="right" id="arrow-right" role="button" tabindex="-1" class="sc-1u3l2ng-0 boZYcJ">
+                          </div>
+                        </div>
+                        <div id="" class="sc-1gk9bdj-0 gJZvhE">
+                          <div class="sc-1gk9bdj-1 fnnPNo"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="rokt-placeholder"></div>
+      </div>
+    </div>
+    <div id="manageCard" class="sc-6ciy8u-0 dnDwUz">
+      <div class="sc-6ciy8u-5 jXBvpD"><span>
+          保存したカードを管理する
+        </span><button id="closeButton" type="button" class="sc-6ciy8u-6 cHHZZD"><svg viewBox="0 0 40 40"
+            focusable="false" aria-hidden="true" size="16" height="16px" width="16px" color="brand_text"
+            class="sc-14dq9fm-0 jqKWum">
+            <g fill-rule="evenodd">
+              <path
+                d="M6.61611652,6.61611652 C7.10427189,6.12796116 7.89572811,6.12796116 8.38388348,6.61611652 L8.38388348,6.61611652 L20,18.233 L31.6161165,6.61611652 C32.0717282,6.16050485 32.7915486,6.13013074 33.2823881,6.52499419 L33.3838835,6.61611652 C33.8720388,7.10427189 33.8720388,7.89572811 33.3838835,8.38388348 L33.3838835,8.38388348 L21.767,20 L33.3838835,31.6161165 C33.8394952,32.0717282 33.8698693,32.7915486 33.4750058,33.2823881 L33.3838835,33.3838835 C32.8957281,33.8720388 32.1042719,33.8720388 31.6161165,33.3838835 L31.6161165,33.3838835 L20,21.767 L8.38388348,33.3838835 C7.9282718,33.8394952 7.20845138,33.8698693 6.71761187,33.4750058 L6.61611652,33.3838835 C6.12796116,32.8957281 6.12796116,32.1042719 6.61611652,31.6161165 L6.61611652,31.6161165 L18.233,20 L6.61611652,8.38388348 C6.16050485,7.9282718 6.13013074,7.20845138 6.52499419,6.71761187 Z"
+                fill="inherit"></path>
+            </g>
+          </svg></button></div>
+      <div class="sc-6ciy8u-4 cxtqFs"><input name="nds-pmd" type="hidden">
+        <div id="manage_card_drawer">
+          <div class="CreditCard__card_head_txt">
+
+            カード情報は安全性を高めるために当社の安全なサーバーで暗号化されます。
+            プライバシー上の理由から、3 桁または 4 桁のセキュリティ コードは保存されません。
+            詳しくはこちら&nbsp;
+
+            <div color="link_blue" class="sc-izol8d-0 kpyTAW"><a aria-label="安全なチェックアウト" role="button" tabindex="0"
+                target="_self">
+
+                安全なチェックアウト
+
+              </a></div>
+
+            。
+
+          </div>
+          <div class="CreditCard__no_card_container">
+
+            現在、アカウントに関連付けられた保存済みカードはありません
+
+          </div>
+          <div><button tabindex="0" type="button" width="auto" id="addcreditcard" class="sc-1gktvoi-0 HGITz"
+              color="primary"><span class="sc-1gktvoi-1 jtvEdo">
+                カードを追加
+              </span></button></div>
+        </div>
+      </div>
+    </div>
+    <div id="overlay" class="sc-6ciy8u-1 exAPRP"></div>
+  </main>
+  <footer class="footer" style="margin-top: 0;">
+    <div class="footer__inner l__content">
+      <div class="footer__nav">
+        <ul class="footer__nav--list">
+          <li class="footer__nav--item footer__logo">
+            <img src="./images/logo-staples-footer-grey.svg" alt="">
+          </li>
+          <li class="footer__nav--item">
+            <h6 class="footer__nav--ttl">約</h6>
+            <a href="" class="footer__nav--anotherLink">印刷およびマーケティングサービスへのお問い合わせ</a>
+            <a href="" class="footer__nav--anotherLink">画像保存ポリシー</a>
+            <a href="" class="footer__nav--anotherLink">プライバシーポリシー</a>
+            <a href="" class="footer__nav--anotherLink">規約と条件</a>
+          </li>
+          <li class="footer__nav--item">
+            <h6 class="footer__nav--ttl">クイックリンク</h6>
+            <a href="" class="footer__nav--anotherLink">マイプロジェクト</a>
+            <a href="" class="footer__nav--anotherLink">私の注文</a>
+            <a href="" class="footer__nav--anotherLink">店舗検索機能</a>
+          </li>
+          <li class="footer__nav--item">
+            <h6 class="footer__nav--ttl">その他のビジネスソリューション</h6>
+            <a href="" class="footer__nav--anotherLink">ビジネスフォーム</a>
+            <a href="" class="footer__nav--anotherLink">小切手</a>
+            <a href="" class="footer__nav--anotherLink">販促品</a>
+            <a href="" class="footer__nav--anotherLink">オンライン マーケティング サービス</a>
+          </li>
+          <li class="footer__nav--item footer-social-media">
+            <h6 class="footer__nav--ttl">参加してください</h6>
+            <div class="social-links-container">
+              <a href="" class="footerTwitter"><span class="sr-only">Twitter</span></a>
+              <a href="" class="footerFacebook"><span class="sr-only">Facebook</span></a>
+              <a href="" class="footerYoutube"><span class="sr-only">Youtube</span></a>
+              <a href="" class="footerLinkedin"><span class="sr-only">Linkedin</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer__copyright--container">
+          <div class="footer__copyright--txt">
+            <p>このウェブサイトは、米国居住者のみが使用することを意図しています。<br class="sp_br">Staples, Inc.、無断複写・転載を禁じます。</p>
+          </div>
+          <div class="footer__copyright--policy">
+            <a href="" class="">詳細については、配送ポリシーをご覧ください</a>
+            <a href="" class="">© 1998-2022</a>
+          </div>
+          <div class="footer__copyright--cookie">
+            <a href="" class="">クッキーの設定</a>
+            <a href="" class="">私の個人情報を販売しないでください</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./js/inview.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/main.js" defer></script>
+  <script>
+    // カードを追加ボタンをクリックしたら実行される関数
+    function showCardManagement() {
+      var div = document.getElementById("manageCard");
+      var overlay = document.getElementById("overlay");
+
+      div.style.transform = "translateX(0)";
+      overlay.style.display = "block";
+    }
+
+    // Closeボタンをクリックしたら実行される関数
+    function closeCardManagement() {
+      var div = document.getElementById("manageCard");
+      var overlay = document.getElementById("overlay");
+
+      div.style.transform = "translateX(300em)";
+      overlay.style.display = "none";
+    }
+
+    // カードを追加ボタン要素を取得
+    var addButton = document.getElementById("addCardButton");
+
+    // Closeボタン要素を取得
+    var closeButton = document.getElementById("closeButton");
+
+    // カードを追加ボタンにクリックイベントリスナーを追加
+    addButton.addEventListener("click", showCardManagement);
+
+    // Closeボタンにクリックイベントリスナーを追加
+    closeButton.addEventListener("click", closeCardManagement);
+
+  </script>
+</body>
+
+</html>

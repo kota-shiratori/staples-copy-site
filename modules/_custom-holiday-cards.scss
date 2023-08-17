@@ -1,0 +1,708 @@
+/*----------------------------------------
+	business-card header
+----------------------------------------*/
+.token-container {
+  float: left;
+  width: auto;
+  margin-left: 40px;
+  background: #f2f2f2;
+  border-radius: 25px;
+  height: 34px;
+  position: relative;
+  padding: 4px 0 2px 4px;
+  background-image: url(https://splus-assets.pnimedia.com/dynamic/Content/images/RetailerSpecific/SPLUS/search-icon?v=8bee8e283eb7f2bb);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 15px;
+  background-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &::before {
+    background-image: url(https://splus-assets.pnimedia.com/dynamic/Content/images/RetailerSpecific/SPLUS/search-icon?v=8bee8e283eb7f2bb);
+    background-repeat: no-repeat;
+    background-position: left;
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    background-size: 12px;
+    transform: translate(50%, -50%);
+  }
+}
+
+.token--search-term {
+  padding: 9px 30px 9px 10px;
+  height: 15px;
+  width: 60px;
+  min-width: 60px;
+  border-radius: 25px;
+  font-family: "NormsProRegular", "Norms Pro", arial, sans-serif;
+  font-size: 13px;
+  text-transform: capitalize;
+  background-color: #444444;
+  color: #ffffff;
+  letter-spacing: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.token-btn {
+  background-color: #181818;
+  border-radius: 50%;
+  display: block;
+  letter-spacing: 0.05em;
+  height: auto;
+  min-height: 18px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  min-width: 18px;
+  position: absolute;
+  right: 5px;
+  top: 11px;
+  transform: none;
+  box-shadow: none;
+  border-bottom: none;
+  transition-property: none;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 11px;
+    width: 2px;
+    background: #444444;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.token-search-input {
+  border: none;
+  outline: none;
+  max-width: 94% !important;
+  margin-left: 6% !important;
+  padding-left: 140px !important;
+
+  &:focus {
+    max-width: 100%;
+    margin-left: 0;
+    outline: none;
+  }
+}
+
+.token-input-btn {
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 20px;
+  top: 12px;
+}
+
+@include media(l) {
+  .token-search-input {
+    padding-left: 110px !important;
+  }
+}
+
+@include media(m) {
+  .token-search-input {
+    margin-left: 0;
+    margin-right: 50px;
+    padding-left: 65px !important;
+  }
+}
+
+@include media(s) {
+  .token-container {
+    &::before {
+      content: none;
+    }
+  }
+  .token-search-input {
+    margin-right: 0;
+    background-position-x: 80px !important;
+  }
+  .token-search-input:focus {
+    padding-left: 100px !important;
+    margin-right: 45px !important;
+  }
+  .token-input-btn.active {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/*----------------------------------------
+	custom-holiday-cards main
+----------------------------------------*/
+
+.custom-holiday-cards {
+  // <-- hero -->
+
+  &__hero {
+    min-height: 470px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      pointer-events: none;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &--container {
+      top: 35px;
+      position: relative;
+      z-index: 10;
+      margin-left: 8.33333333%;
+      width: 41.66666667%;
+    }
+
+    &--container.open {
+      padding-bottom: 104px;
+      padding-top: 128px;
+    }
+
+    &--ttl {
+      margin-bottom: 10px;
+      font-family: "NormsProBold", "Norms Pro", arial, sans-serif;
+      font-size: 60px;
+      letter-spacing: -1.5px;
+      line-height: 0.95;
+      color: #cc0000;
+      text-align: left;
+      text-transform: none;
+      font-weight: normal;
+    }
+
+    &--promotion {
+      font-family: "NormsProRegular", "Norms Pro", arial, sans-serif;
+      color: #444444;
+      font-size: 18px;
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    &--truncate-txt {
+      transition: all 0.2s ease-in-out;
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+        text-transform: none;
+        margin: 10px 0;
+
+        strong {
+          font-family: "NormsProBold", "Norms Pro", arial, sans-serif;
+          font-weight: bold;
+        }
+      }
+
+      a {
+        font-weight: bold;
+        color: #0070c9;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &--truncate-txt.open {
+      display: none;
+    }
+
+    &--full-txt {
+      transition: all 0.2s ease-in-out;
+      display: none;
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+        text-transform: none;
+        margin: 10px 0;
+      }
+
+      strong {
+        font-family: "NormsProBold", "Norms Pro", arial, sans-serif;
+        font-weight: bold;
+      }
+
+      ul {
+        list-style: unset;
+        margin-left: 20px;
+      }
+
+      a {
+        font-weight: bold;
+        color: #0070c9;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+    }
+    &--full-txt.open {
+      display: block;
+    }
+  }
+
+  // <-- hero -->
+
+  // <-- industry -->
+  .industry {
+    padding: 8px 20px;
+    margin-top: 8px;
+
+    &__ttl {
+      padding-top: 50px;
+      font-family: "NormsProBold", "Norms Pro", arial, sans-serif;
+      color: #000000;
+      font-size: 30px;
+      line-height: 35px;
+      text-align: left;
+      text-transform: capitalize;
+      font-weight: normal;
+
+      &::after {
+        content: "";
+        display: block;
+        margin: 10px 0 20px;
+        height: 3px;
+        width: 16px;
+        background: #cc0000;
+      }
+    }
+
+    &__list {
+      padding: 0 12px;
+      transform: translateY(-15px);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__card {
+      padding: 8px;
+      margin-bottom: 18px;
+      width: calc((100% - 80px) / 4);
+
+      &--img {
+        border-radius: 6px;
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s ease-out, transform 0.3s ease-out,
+          opacity 0.2s ease-out;
+        transform: translateZ(0);
+        overflow: hidden;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 352px;
+        transition-delay: 0.1s;
+
+        &:hover {
+          box-shadow: rgba(45, 45, 45, 0.05) 0 2px 2px,
+            rgba(49, 49, 49, 0.05) 0 4px 4px, rgba(42, 42, 42, 0.05) 0 8px 8px,
+            rgba(32, 32, 32, 0.05) 0 16px 16px,
+            rgba(49, 49, 49, 0.05) 0 32px 32px,
+            rgba(35, 35, 35, 0.05) 0 64px 64px;
+          transform: translate(0, -4px);
+          color: #cc0000;
+
+          .industry__card--ttl {
+            color: #cc0000;
+          }
+        }
+
+        img {
+          object-position: center;
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          border: 0;
+        }
+
+        .ng-scope {
+          position: absolute;
+          right: 0;
+          top: 30px;
+          z-index: 1;
+
+          li {
+            color: #fff;
+            margin-bottom: 19px;
+            text-align: right;
+            font-size: 13px;
+            font-weight: bold;
+
+            .foil-available {
+              background: linear-gradient(
+                90deg,
+                #dbb06e 0%,
+                #e7cd7a 24.39%,
+                #c89648 55.49%,
+                #ca994e 82.71%,
+                #e6c97f 100%
+              );
+              background-size: calc(100% + 30px);
+              color: #000;
+              font-family: "NormsProBold", "Norms Pro", arial, sans-serif;
+              transition: background-position ease-in-out 0.3s;
+              padding: 7px 12px 5px 12px;
+            }
+          }
+        }
+      }
+
+      &--description {
+        height: auto;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 25px;
+      }
+
+      &--ttl {
+        color: #444;
+        transition: color 0.3s ease-out, transform 0.3s ease-out,
+          opacity 0.2s ease-out;
+        font-weight: bold;
+        font-size: 18px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      &--link {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+  }
+  // <-- industry -->
+
+  .marketing-block {
+    color: #444444;
+    background-color: #ffffff;
+    min-height: 550px;
+    margin-top: 60px;
+    margin-bottom: 120px;
+    display: flex;
+    position: relative;
+
+    &-text {
+      padding: 70px 16px 10px 9px;
+      margin-left: 8.33333333%;
+      width: 47%;
+
+      h3 {
+        font-family: "NormsProBold", "Norms Pro", arial, sans-serif;
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        margin-bottom: 12px;
+        font-weight: normal;
+      }
+
+      p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 18px;
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: 15px;
+        margin-bottom: 30px;
+        font-family: "NormsProRegular", "Norms Pro", arial, sans-serif;
+
+        li {
+          font-size: 18px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+
+    &-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+
+      img {
+        border-radius: 0;
+        max-width: 100%;
+        width: auto;
+        position: absolute;
+        right: 0;
+        bottom: -70px;
+        box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .fade {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1.5s, transform 1s;
+      }
+      .fade.active {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+
+@include media(l) {
+  .token-container {
+    margin-left: 0;
+  }
+  .custom-holiday-cards {
+    &__hero {
+      min-height: 530px;
+
+      figure {
+        margin-top: 90px;
+        width: 130%;
+        left: -10%;
+      }
+
+      &--ttl {
+        font-size: 50px;
+      }
+    }
+
+    .industry {
+      &__list {
+        padding: 0;
+      }
+
+      &__card {
+        width: calc((100% - 40px) / 2);
+      }
+    }
+
+    .marketing-block {
+      display: flex;
+
+      &-text {
+        padding: 70px 60px 10px 9px;
+        width: 41%;
+
+        h3 {
+          font-size: 36px;
+        }
+      }
+
+      &-img {
+        padding: 0 15px;
+        width: 50%;
+
+        img {
+          bottom: -30px;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include media(m) {
+  .token-container {
+    margin-left: -50px;
+  }
+  .custom-holiday-cards {
+    &__hero {
+      min-height: 480px;
+
+      figure {
+        top: 8px;
+      }
+
+      &--container {
+        width: 50%;
+        top: 20px;
+      }
+
+      &--ttl {
+        font-size: 40px;
+        line-height: 34px;
+      }
+
+      &--promotion {
+        font-size: 14px;
+      }
+    }
+
+    .marketing-block {
+      display: flex;
+      flex-direction: column;
+
+      &-text {
+        width: 80%;
+        margin-left: 0;
+        padding: 70px 8.333% 20px;
+
+        h3 {
+          font-size: 36px;
+        }
+      }
+
+      &-img {
+        min-height: 350px;
+        width: 100%;
+
+        img {
+          max-width: 70%;
+          width: 100%;
+          bottom: -100px;
+        }
+      }
+    }
+  }
+}
+
+@include media(s) {
+  .token-container {
+    margin-left: 3px;
+  }
+  .custom-holiday-cards {
+    &__hero {
+      min-height: 530px;
+      figure {
+        top: 60px;
+      }
+      &--container {
+        top: 60px;
+      }
+      &--container.open {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+    }
+
+    .industry {
+      padding: 0 10px;
+
+      &__card {
+        width: 100%;
+        padding: 5px;
+
+        &--img {
+          height: 290px;
+        }
+      }
+    }
+
+    .marketing-block {
+      &-text {
+        width: 90%;
+        padding: 65px 15px 0;
+
+        h3 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 16px;
+          margin-bottom: 20px;
+          line-height: 1.6;
+        }
+
+        ul {
+          margin-bottom: 0px;
+
+          li {
+            line-height: 1.5;
+            padding-bottom: 0;
+            font-size: 16px;
+          }
+        }
+      }
+      &-img {
+        min-height: 165px;
+
+        img {
+          bottom: -80px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .custom-holiday-cards {
+    &__hero {
+      min-height: 442px;
+      overflow: visible;
+      align-items: flex-end;
+
+      figure {
+        width: 200%;
+        left: -86%;
+        top: 40px;
+      }
+
+      &--container {
+        top: unset;
+        width: 83.333%;
+        padding-top: 350px;
+      }
+      &--container.open {
+        padding-top: 350px;
+        padding-bottom: 40px;
+      }
+
+      &--ttl {
+        font-size: 36px;
+        line-height: 34px;
+      }
+
+      &--full-txt {
+        p {
+          font-size: 14px;
+          line-height: 1.57;
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+}
