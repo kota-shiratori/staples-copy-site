@@ -48,13 +48,6 @@
   margin: 0 !important;
 }
 
-/* .grid__column {
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-} */
-
 .dynamic-modal__modal-wrapper {
   z-index: 111111;
 }
@@ -565,6 +558,15 @@ svg:not(:root) {
   flex-flow: row wrap;
   margin-left: -6px;
   row-gap: 5px;
+}
+
+@media (max-width: 600px) {
+  .other-payment-options__main-section .other-payment-options__payment-options {
+    justify-content: center;
+  }
+  .condensed-item-section__condensed_item_wrapper {
+    margin-top: 20px;
+  }
 }
 
 .other-payment-options__main-section
@@ -39532,17 +39534,17 @@ body {
   margin-left: -6px;
 }
 
-@media (min-width: 821px) and (max-width: 1024px) {
+/* @media (min-width: 821px) and (max-width: 1024px) {
   .checkout__checkout_container .checkout__shipping_payment_container {
     width: 58%;
   }
-}
+} */
 
-@media (min-width: 601px) and (max-width: 820px) {
+/* @media (min-width: 601px) and (max-width: 820px) {
   .checkout__checkout_container .checkout__shipping_payment_container {
     width: 58%;
   }
-}
+} */
 
 @media (max-width: 600px) {
   .checkout__checkout_container .checkout__shipping_payment_container {
@@ -47596,10 +47598,10 @@ body {
     max-width: 8.33333%;
   }
 
-  .grid__num_xs_0 > div,
+  /* .grid__num_xs_0 > div,
   .grid__span_xs_0 {
     display: none !important;
-  }
+  } */
 
   .grid__layout .grid__card_container {
     width: 100%;
@@ -47738,10 +47740,10 @@ body {
     max-width: 8.33333%;
   }
 
-  .grid__num_sm_0 > div,
+  /* .grid__num_sm_0 > div,
   .grid__span_sm_0 {
     display: none !important;
-  }
+  } */
 
   .grid__layout .grid__card_container {
     width: 33.33%;
@@ -47880,10 +47882,10 @@ body {
     max-width: 8.33333%;
   }
 
-  .grid__num_md_0 > div,
+  /* .grid__num_md_0 > div,
   .grid__span_md_0 {
     display: none !important;
-  }
+  } */
 
   .grid__layout .grid__card_container {
     width: 25%;
@@ -49137,7 +49139,7 @@ div.wpwl-group-cvv {
 }
 .wpwl-label-prepaidMsg {
   color: #000;
-  font-family: Motiva,Helvetica,Arial,sans-serif;
+  font-family: Motiva, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 0;
@@ -49189,5 +49191,155 @@ div.wpwl-group-cvv {
   justify-content: center;
   padding-top: 12px;
   font-size: 14px;
-  font-family: Motiva-Light,Motiva,Helvetica,Arial,sans-serif;
+  font-family: Motiva-Light, Motiva, Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .payment-shipping-empty-tile__payment_shipping_empty_tile_wrapper {
+    padding: 24px 20px 22px 24px;
+  }
+}
+
+.checkout__sticky_header_wrapper.checkout__show_at_bottom {
+  display: none;
+}
+@media (max-width: 820px) {
+  .checkout__sticky_header_wrapper.checkout__show_at_bottom {
+    display: block;
+  }
+}
+.checkout__sticky_header_wrapper
+  .checkout__order_terms_and_condition_wrapper
+  .checkout__left_section {
+  display: flex;
+}
+.hreBfN {
+  font-family: Motiva-Medium, Motiva, Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transition: all 0.1s ease-in 0s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 12px 0px;
+  border-radius: 20px;
+  padding: 8px 20px;
+  background-color: rgb(204, 0, 0);
+  border: none;
+  margin: 0px;
+}
+.icuiQe {
+  padding: 0px;
+  margin: 0px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.notificationBubble__notificationWrapper.notificationBubble__failure {
+  border: 1px solid #c00;
+  border-left-width: 12px;
+}
+.notificationBubble__notificationWrapper.notificationBubble__start {
+  align-items: flex-start;
+}
+.notificationBubble__notificationWrapper.notificationBubble__background_color_white {
+  background-color: #fff;
+}
+.notificationBubble__notificationWrapper {
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  border-radius: 4px;
+  padding: 15px 24px 15px 12px;
+  display: inline-flex;
+  position: relative;
+}
+.notificationBubble__notificationWrapper .notificationBubble__icon_span {
+  display: flex;
+  min-width: 21px;
+}
+.notificationBubble__notificationWrapper.notificationBubble__default {
+  border: 0;
+}
+.notificationBubble__notificationWrapper.notificationBubble__fontColor_red {
+  color: #c00;
+}
+.uiStyles__text_staples_red {
+  color: #c00;
+}
+.notificationBubble__notificationWrapper .notificationBubble__content {
+  padding-left: 12px;
+}
+@media (max-width: 820px) {
+  .checkout__sticky_header_wrapper {
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px;
+    flex-direction: column;
+  }
+  .checkout__sticky_header_wrapper.checkout__show_at_bottom {
+    top: unset;
+    bottom: 0;
+    box-shadow: 0 -4px 16px 0 rgba(0, 0, 0, 0.15);
+  }
+  .checkout__sticky_header_wrapper
+    .checkout__order_terms_and_condition_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .order-summary__stickyPlaceOrderBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .checkout__sticky_header_wrapper
+    .checkout__order_terms_and_condition_wrapper
+    .checkout__left_section {
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .grid__column.grid__span_xs_0.grid__span_sm_0.grid__span_md_0.grid__span_lg_3 {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+.payment-shipping-empty-tile__payment_shipping_empty_tile_wrapper .payment-shipping-empty-tile__icon_title_wrapper .payment-shipping-empty-tile__icon_wrapper {
+    width: 56px;
+    height: 56px;
+}
+.fdJMYs {
+  height: 28px;
+    width: 28px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+.fdJMYs > svg,.payment-shipping-empty-tile__icon_wrapper.payment-shipping-empty-tile__top_padding > svg {
+  height: 28px !important;
+    width: 28px !important;
+}
+.payment-shipping-empty-tile__payment_shipping_empty_tile_wrapper .payment-shipping-empty-tile__icon_title_wrapper .payment-shipping-empty-tile__title {
+  margin-top: 0;
+}
 }
