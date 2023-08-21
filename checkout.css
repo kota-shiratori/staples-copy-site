@@ -49342,4 +49342,10 @@ div.wpwl-group-cvv {
 .payment-shipping-empty-tile__payment_shipping_empty_tile_wrapper .payment-shipping-empty-tile__icon_title_wrapper .payment-shipping-empty-tile__title {
   margin-top: 0;
 }
+.modal-content {
+width: 100%;
+}
+.other-payment__other-payment-container {
+  margin-top: 50px;
+}
 }
