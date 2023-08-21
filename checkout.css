@@ -247,7 +247,7 @@
 @media (min-width: 1025px) {
   .payment-shipping-empty-tile__payment_shipping_empty_tile_wrapper {
     padding: 16px;
-    min-height: 203px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
   }
@@ -415,7 +415,7 @@ svg:not(:root) {
 @media (min-width: 1025px) {
   .payment-shipping-empty-tile__payment_shipping_empty_tile_wrapper {
     padding: 16px;
-    min-height: 203px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
   }
@@ -39417,6 +39417,8 @@ body {
   .checkout__checkout_container {
     width: auto;
     margin: -12px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -44655,6 +44657,15 @@ body {
   padding: 20px 0;
 }
 
+.mmop__form_wrapper > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mmop__form_wrapper > form > .formwrapper__alignItems {
+  margin-bottom: 10px;
+}
+
 .mmop__footer_content_wrapper {
   display: flex;
   flex-direction: column;
@@ -48219,6 +48230,7 @@ body {
 .formwrapper__alignItems {
   display: flex;
   flex-direction: row;
+  margin-bottom: 50px;
 }
 
 .cCRpMk {
@@ -49129,6 +49141,7 @@ div.wpwl-group-cvv {
 .button__sparq.button__secondary.button__light {
   background-color: #fff;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+  color: #000;
 }
 .button__sparq.button__button.button__md {
   font-size: 16px;
@@ -49348,4 +49361,13 @@ width: 100%;
 .other-payment__other-payment-container {
   margin-top: 50px;
 }
+}
+
+.payment-shipping-empty-tile__payment_shipping_empty_tile_wrapperBox {
+  margin-top: 55px;
+}
+@media (max-width: 1024px) {
+  .payment-shipping-empty-tile__payment_shipping_empty_tile_wrapperBox {
+    margin-top: 0;
+  }
 }
