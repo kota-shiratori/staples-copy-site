@@ -1,4 +1,5 @@
-*,
+body.checkout {
+    *,
 :after,
 :before {
   box-sizing: border-box;
@@ -48052,15 +48053,21 @@ body {
   shape-rendering: inherit;
 }
 
-@media only screen and (min-width: 200px) .paypal-button.paypal-button-shape-pill {
-  border-radius: 17px;
-}
+@media only screen and (min-width: 200px){
+    .paypal-button.paypal-button-shape-pill {
+        border-radius: 17px;
+      }
+} 
 
-@media only screen and (min-width: 150px) .paypal-button.paypal-button-shape-pill {
-  border-radius: 17px;
+@media only screen and (min-width: 150px) {
+    .paypal-button.paypal-button-shape-pill {
+      border-radius: 17px;
+    }
 }
-@media only screen and (min-width: 75px) .paypal-button.paypal-button-shape-pill {
-  border-radius: 17px;
+@media only screen and (min-width: 75px) {
+    .paypal-button.paypal-button-shape-pill {
+      border-radius: 17px;
+    }
 }
 .paypal-button.paypal-button-color-gold,
 .paypal-button-row.paypal-button-color-gold .menu-button {
@@ -48069,20 +48076,26 @@ body {
 .paypal-button.paypal-button-text-color-black {
   color: #2c2e2f;
 }
-@media only screen and (min-width: 200px) .paypal-button {
-  display: inline-block;
-  text-align: center;
-  height: 100%;
+@media only screen and (min-width: 200px) {
+    .paypal-button {
+      display: inline-block;
+      text-align: center;
+      height: 100%;
+    }
 }
-@media only screen and (min-width: 150px) .paypal-button {
-  display: inline-block;
-  text-align: center;
-  height: 100%;
-}
-@media only screen and (min-width: 75px) .paypal-button {
-  display: inline-block;
-  text-align: center;
-  height: 100%;
+@media only screen and (min-width: 150px) {
+    .paypal-button {
+      display: inline-block;
+      text-align: center;
+      height: 100%;
+    }
+} 
+@media only screen and (min-width: 75px){
+    .paypal-button {
+     display: inline-block;
+     text-align: center;
+     height: 100%;
+   }
 }
 .paypal-button {
   border: 1px solid transparent;
@@ -49370,4 +49383,5 @@ width: 100%;
   .payment-shipping-empty-tile__payment_shipping_empty_tile_wrapperBox {
     margin-top: 0;
   }
+}
 }
